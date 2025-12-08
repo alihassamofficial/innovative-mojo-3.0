@@ -6,6 +6,10 @@ import { usePathname } from "next/navigation";
 
 import Button from "@/ui/Button";
 import WebDrawer from "../ui/WebDrawer";
+import Text from "@/components/ui/Text";
+import { PhoneSolidIcon, ArrowUpRightIcon } from "@/components/ui/Icons";
+
+import logo from "@/public/images/navbar/mojo-logo.png";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -20,17 +24,37 @@ export default function Navbar() {
 
   return (
     <>
+      {/* Top Bar Banner */}
+      <div className="w-full bg-secondary">
+        <div className="max-w-[1240px] mx-auto px-5 py-[7px]">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            {/* Text */}
+            <Text className="md:text-[13px] md:leading-[100%]  font-normal font-mona-sans">
+              Talk to our architects about custom AI voice agent deployment.
+            </Text>
+
+            {/* Book A Demo Button */}
+            <Link href="/" className="shrink-0 flex items-center gap-[6px]">
+              <Text className="md:text-[13px] md:leading-[100%]  font-medium font-mona-sans">
+                Book A Demo
+              </Text>
+              <ArrowUpRightIcon className="w-3 h-3 text-white" />
+            </Link>
+          </div>
+        </div>
+      </div>
+
       {/* Desktop Navigation */}
-      <header className="hidden lg:block px-5 pb-[83px] pt-[60px]">
-        <div className="items-center justify-between w-full max-w-[1240px] mx-auto flex">
+      <header className="hidden lg:block w-full max-w-[1240px] mx-auto  py-[28px]">
+        <div className="items-center justify-between px-5 flex">
           {/* Logo */}
-          <Link href="/" className="shrink-0">
+          <Link href="/" className="shrink-0 w-[94px] h-[72px]">
             <Image
-              src="/navbar/mojo-logo.png"
+              src={logo}
               alt="Innovative Mojo"
-              width={163}
-              height={126}
-              className="h-[126px] w-[163px]"
+              width={94}
+              height={72}
+              className="w-full h-full object-contain"
               priority
             />
           </Link>
@@ -64,7 +88,8 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <Link href="/call-ai" className="shrink-0">
-            <Button className="bg-[#CFA846] text-black   px-6 py-3 text-[18px] leading-[28px] rounded-full font-medium w-[207px] h-[62px]">
+            <Button className="bg-[#E5BF5B] border border-[#FAC11D] text-black  md:text-[15px]  leading-[28px] l rounded-[10px] font-medium w-[190px] h-[45px] font-mona-sans">
+              <PhoneSolidIcon className="mr-[6px]" />
               Call The AI Now
             </Button>
           </Link>
@@ -72,7 +97,7 @@ export default function Navbar() {
       </header>
 
       {/* Mobile Navigation */}
-      <header className="flex w-full items-center justify-between px-5 pt-16 pb-[54px] lg:hidden">
+      <header className=" hidden w-full items-center justify-between px-5 pt-16 pb-[54px] lg:hidden">
         <Link href="/">
           <Image
             src="/navbar/mojo-logo.png"

@@ -11,7 +11,7 @@ import cardBgBottom from "@/public/images/home/clone-your-employe/vertical-card-
 const CloneYourEmployee = () => {
   return (
     <section className="relative w-full overflow-hidden">
-      <div className="max-w-[1240px] mx-auto px-5 ">
+      <div className="max-w-[1240px] mx-auto  ">
         <div className="mt-[90px] px-5">
           {/* Main Headline */}
           <Text
