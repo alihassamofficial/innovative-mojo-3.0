@@ -5,6 +5,7 @@ import FuturisticApproach from "@/components/Home/FuturisticApproach";
 import CloneYourEmployee from "@/components/Home/CloneYourEmployee";
 import ServiceTiers from "@/components/Home/ServiceTiers";
 import CTA from "@/components/Home/CTA";
+import Implementation from "@/components/Home/Implementation";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <PowerOfAI />
       <FuturisticApproach />
       <CloneYourEmployee />
+      <Implementation />
       <ServiceTiers />
       <CTA />
     </div>
