@@ -10,28 +10,30 @@ const Problem = () => {
   return (
     <>
       <div className="relative w-full bg-white overflow-hidden md:h-[424px] mt-[85px] mb-[92px]">
-        <Image
-          src={problemBg}
-          alt="problemBg"
-          className="w-full absolute inset-0 h-full object-cover max-w-[818px]"
-        />
-        <div className="relative flex gap-0 justify-center items-center">
-          <div className="w-full max-w-[818px]">
-            <Text className="text-[#050000] text-[20px] leading-[32px] font-normal mb-[50px]">
-              You are in the middle of a walkthrough with a high-value client.
-              Your phone buzzes. It’s a new lead calling from a listing site.
-            </Text>
-            <ul className="list-disc list-inside">
-              <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
-                Choice A: Answer it, and be rude to the client standing in front
-                of you.
-              </li>
-              <br />
-              <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
-                Choice B: Send it to voicemail, and watch that lead call the
-                next agent on the list.
-              </li>
-            </ul>
+        <div className="relative flex gap-0 justify-center">
+          <div className="relative md:left-[3.8%]">
+            <Image
+              src={problemBg}
+              alt="problemBg"
+              className="w-full absolute inset-0 max-w-[818px] h-[425px]"
+            />
+            <div className="relative w-full max-w-[815px] z-10 pl-[32px] pr-[72px] flex flex-col justify-center items-center min-h-[425px]">
+              <Text className="text-[#050000] text-[20px] leading-[32px] font-normal mb-[50px]">
+                You are in the middle of a walkthrough with a high-value client.
+                Your phone buzzes. It's a new lead calling from a listing site.
+              </Text>
+              <ul className="list-disc pl-5">
+                <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
+                  Choice A: Answer it, and be rude to the client standing in
+                  front of you.
+                </li>
+                <br />
+                <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
+                  Choice B: Send it to voicemail, and watch that lead call the
+                  next agent on the list.
+                </li>
+              </ul>
+            </div>
           </div>
           <div>
             <Image
