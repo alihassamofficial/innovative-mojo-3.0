@@ -180,3 +180,48 @@ export const PhoneSolidIcon = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
+
+export const RightArrowIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={42}
+    height={26}
+    fill="none"
+    {...props}
+  >
+    <path
+      fill="#000"
+      d="M41.237 14.124a1.75 1.75 0 0 0 0-2.475L30.1.514a1.75 1.75 0 0 0-2.474 2.474l9.9 9.9-9.9 9.9A1.75 1.75 0 1 0 30.1 25.26l11.137-11.137ZM0 12.887v1.75h40v-3.5H0v1.75Z"
+    />
+  </svg>
+);
+
+export const NavigateNextIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={26}
+    height={23}
+    fill="none"
+    {...props}
+  >
+    <path
+      fill="#000"
+      d="M25.06 12.107a1.5 1.5 0 0 0 0-2.122L15.516.44a1.5 1.5 0 1 0-2.122 2.122l8.486 8.485-8.486 8.485a1.5 1.5 0 0 0 2.122 2.122l9.546-9.546ZM0 11.046v1.5h24v-3H0v1.5Z"
+    />
+  </svg>
+);
+
+export const NavigatePreviousIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={26}
+    height={23}
+    fill="none"
+    {...props}
+  >
+    <path
+      fill="#000"
+      d="M.44 9.985a1.5 1.5 0 0 0 0 2.122l9.545 9.546a1.5 1.5 0 0 0 2.122-2.122L3.62 11.046l8.486-8.485A1.5 1.5 0 1 0 9.985.439L.44 9.985Zm25.06 1.061v-1.5h-24v3h24v-1.5Z"
+    />
+  </svg>
+);
