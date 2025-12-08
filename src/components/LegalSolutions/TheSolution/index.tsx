@@ -45,7 +45,7 @@ const TheSolution = () => {
     ];
 
     return (
-        <section className="relative w-full bg-white py-20  overflow-hidden">
+        <section className="relative w-full bg-white mb-[92px]  overflow-hidden">
             <h1 className="text-center text-[48px] leading-[60px] font-bold font-mona-sans mb-[12px]">The Solution: The AI Intake Specialist</h1>
             <Text className="text-center max-w-[740px] mx-auto mb-12">We deploy HIPAA-compliant, secure voice agents that act as your firm’s first line of defense. This is not a "call center." This is a custom-trained logic engine.</Text>
             <div className="max-w-[1240px] mx-auto px-5">
