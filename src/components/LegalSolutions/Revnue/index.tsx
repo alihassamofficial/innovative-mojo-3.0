@@ -7,7 +7,7 @@ const Revnue = () => {
     return (
         <div className='mx-auto max-w-[1240px] px-5'>
             <Image src={bg} alt="bg" height={644} width={1240} />
-            <div className="flex flex-wrap md:flex-row justify-between gap-5 mt-12">
+            <div className="flex flex-wrap md:flex-row justify-between gap-5 mt-8 md:mt-12">
                 <Text className='text-[48px] leading-[60px] font-bold font-mona-sans max-w-[600px]'><span className="font-normal">The</span> "Revenue Protection"
                     <span className="font-normal"> ROI</span></Text>
                 <ul className="list-disc pl-5 text-black flex flex-col gap-2  max-w-[520px]  font-mona-sans text-[18px] leading-[24px] m-0 ">
