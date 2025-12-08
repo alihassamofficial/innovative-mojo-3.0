@@ -8,7 +8,8 @@ import problemIcon from "@/public/images/legal-solution/problem.png";
 const Problem = () => {
     return (
         <>
-            <div className="relative w-full bg-white overflow-hidden md:h-[424px] mt-[85px] mb-[92px]">
+            <div className="relative w-full bg-white overflow-hidden mt-[85px] mb-[92px]">
+                <Text as="h2" className="text-center md:text-[48px] leading-[60px] font-bold font-mona-sans mb-16">The Problem: The "Admin Trap"</Text>
                 <div className="relative flex gap-0 justify- max-w-[1220px] mx-auto">
                     <div className="relative ">
                         <Image
@@ -17,9 +18,8 @@ const Problem = () => {
                             className="w-full absolute inset-0 max-w-[790px] h-[425px]"
                         />
                         <div className="relative w-full max-w-[790px] z-10 pl-[32px] pr-[82px] flex flex-col justify-center items-center min-h-[425px]">
-                            <Text className="text-[#050000] text-[20px] leading-[32px] font-normal mb-[50px]">
-                                You are in the middle of a walkthrough with a high-value client.
-                                Your phone buzzes. It's a new lead calling from a listing site.
+                            <Text className="text-[#050000] text-[20px] leading-[32px] font-normal mb-[30px]">
+                            Most growing law firms struggle with the same bottleneck: <span className="font-bold">Intake.</span>
                             </Text>
                             <ul className="list-disc pl-5">
                                 <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
