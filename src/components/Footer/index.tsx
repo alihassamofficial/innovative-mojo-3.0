@@ -25,103 +25,119 @@ const Footer = () => {
       data-aos-easing="ease-in-out"
     >
       {/* Footer Content */}
-      <div className="max-w-[1240px]  relative px-5 w-full  mob:mt-[250px] mob:mb-[100px] flex mob:flex-col xl:flex-column xl:justify-center xl:items-center xl:gap-10 justify-between items-center z-10">
-        {/* Left Section */}
-        <div className="max-w-[600px] text-center md:text-left">
-          <Image
-            src={logo}
-            alt="Innovative Mojo"
-            width={150}
-            height={40}
-            className="mb-5 mx-auto md:mx-0"
-          />
+      <div className="max-w-[1240px]  relative w-full  ">
+        <div className="px-5  flex flex-col md:flex-row md:gap-20 mt-10 md:mt-0 text-left  md:text-center ">
+          {/* Left Section */}
+          <div className="max-w-[600px] text-center md:text-left">
+            <Image
+              src={logo}
+              alt="Innovative Mojo"
+              width={136}
+              height={105}
+              className="mb-[30px] mx-auto md:mx-0 h-[105px] w-[136px]"
+            />
 
-          <Text as="h3" className="text-[26px] leading-[37px]">
-            Innovative MOJO{" "}
-            <span className="text-gold">20+ years of experience</span>, powered
-            by real conversations and real solutions.
-          </Text>
-        </div>
+            <Text
+              as="h2"
+              className="md:text-[26px] md:leading-[37px] text-white font-semibold"
+            >
+              Innovative MOJO{" "}
+              <span className="text-secondary">20+ years of experience</span>,
+              powered by real conversations and real solutions.
+            </Text>
+          </div>
 
-        {/* Right Section */}
-        <div className="flex flex-col md:flex-row md:gap-20 mt-10 md:mt-0 text-left mob:text-center mob:flex-col md:text-center mob:items-center mob:w-full mob:gap-[18px]">
-          {/* Links */}
-          <ul className="space-y-[18px] text-left mob:text-center">
-            <li>
-              <Link href="/" className="text-[16px] font-poppins ">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/projects" className="text-[16px] font-poppins">
-                Real State
-              </Link>
-            </li>
-            <li>
-              <Link href="/mojo-news" className="text-[16px] font-poppins">
-                News
-              </Link>
-            </li>
-            <li>
-              <Link href="/help-center" className="text-[16px] font-poppins">
-                Help center
-              </Link>
-            </li>
-            <li>
-              <Link href="/privacy-policy" className="text-[16px] font-poppins">
-                Privacy policy
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/terms-and-conditions"
-                className="text-[16px] font-poppins"
-              >
-                Terms and conditions
-              </Link>
-            </li>
-          </ul>
-          <div>
-            {/* Contact Info */}
-            <ul className="space-y-[18px] text-left mob:text-center">
-              <li>
-                <a
-                  href="mailto:sales@innovativemojo.com"
-                  className="text-[16px] font-poppins"
+          {/* Right Section */}
+          <div className="flex flex-col md:flex-row md:gap-20 mt-10 md:mt-0 text-left mob:text-center mob:flex-col md:text-center mob:items-center mob:w-full mob:gap-[18px]">
+            {/* Links */}
+            <div className="w-full md:max-w-[180px]  text-center md:text-left flex flex-col gap-[15px]">
+              <Link href="/">
+                <Text
+                  as="p"
+                  className="text-[16px] leading-[28px] text-white font-normal"
                 >
+                  Home
+                </Text>
+              </Link>
+              <Link href="/">
+                <Text
+                  as="p"
+                  className="text-[16px] leading-[28px] text-white font-normal"
+                >
+                  Real State
+                </Text>
+              </Link>
+              <Link href="/">
+                <Text
+                  as="p"
+                  className="text-[16px] leading-[28px] text-white font-normal"
+                >
+                  Legal Solutions
+                </Text>
+              </Link>
+              <Link href="/">
+                <Text
+                  as="p"
+                  className="text-[16px] leading-[28px] text-white font-normal"
+                >
+                  Digital Blueprint
+                </Text>
+              </Link>
+              <Link href="/">
+                <Text
+                  as="p"
+                  className="text-[16px] leading-[28px] text-white font-normal"
+                >
+                  Privacy policy
+                </Text>
+              </Link>
+              <Link href="/">
+                <Text
+                  as="p"
+                  className="text-[16px] leading-[28px] text-white font-normal"
+                >
+                  Terms and conditions
+                </Text>
+              </Link>
+            </div>
+            <div>
+              {/* Contact Info */}
+              <div className="w-full md:max-w-[231px] gap-[15px] flex flex-col md:text-left text-center">
+                <Text className="text-[16px] text-white leading-[28px]">
                   sales@innovativemojo.com
-                </a>
-              </li>
-              <li>
-                <Link href="/booking" className="text-[16px] font-poppins">
-                  Schedule a meeting
+                </Text>
+                <Link href="/">
+                  <Text className="text-[16px] text-white leading-[28px]">
+                    Schedule a meeting
+                  </Text>
                 </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-[16px] font-poppins">
-                  Work with us
+                <Link href="/">
+                  <Text className="text-[16px] text-white leading-[28px]">
+                    Contact
+                  </Text>{" "}
                 </Link>
-              </li>
-              <li>
-                <a href="/" className="text-[16px] font-poppins">
-                  Innovativemojo.com
-                </a>
-              </li>
-            </ul>
-            {/* Social Media Icons */}
-            <div className="flex gap-6 mt-[20px]">
-              {/* <Link href="#">
+                <Link href="/">
+                  <Text className="text-[16px] text-white leading-[28px]">
+                    Innovativemojo.com
+                  </Text>
+                </Link>
+              </div>
+
+              {/* Social Media Icons */}
+              <div className="flex gap-6 mt-[20px]">
+                {/* <Link href="#">
                 <Image src={facebook} alt="Facebook" width={30} height={30} />
               </Link>
               <Link href="#">
                 <Image src={instagram} alt="Instagram" width={30} height={30} />
               </Link> */}
-              {/* <Link
+                {/* <Link
                 className="mob:mx-auto"
                 href="https://www.linkedin.com/company/innovative-mojo/"
               >
                 <Image src={linkedin} alt="LinkedIn" width={30} height={30} />
               </Link> */}
+              </div>
             </div>
           </div>
         </div>

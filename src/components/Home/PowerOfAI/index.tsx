@@ -29,7 +29,7 @@ const PowerOfAI = () => {
   ];
 
   return (
-    <section className="relative w-full bg-white py-20 md:py-[84px] overflow-hidden">
+    <section className="relative w-full bg-white py-20 md:py-[84px] overflow-hidden ">
       {/* Background radial lines effect */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <Image src={bgImage} alt="bg" fill className="object-cover" />
@@ -67,7 +67,7 @@ const PowerOfAI = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-6  w-full">
-                    <Text className="text-black/70 text-base md:text-lg font-poppins">
+                    <Text className=" max-w-[526px] md:text-[18px] md:leading-[24px] font-normal ">
                       {item.description}
                     </Text>
                   </AccordionContent>
