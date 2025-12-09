@@ -14,25 +14,34 @@ const CloneYourEmployee = () => {
   return (
     <section className="relative w-full overflow-hidden">
       <div className="max-w-[1240px] mx-auto  ">
-        <div className="mt-[90px] px-5">
+        <div className="md:mt-[90px] mt-[50px] px-5">
           {/* Main Headline */}
-          <Text
-            as="h2"
-            className="md:text-[60px] md:leading-[120%] font-semibold capitalize tracking-[-1px]  mb-[18px] text-center"
-          >
-            We Don&apos;t Replace Your Team We
-            <br />
-            Clone Your Best Employee.
-          </Text>
-
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            <Text
+              as="h2"
+              className="md:text-[60px] md:leading-[120%] font-semibold capitalize tracking-[-1px]  mb-[18px] text-center"
+            >
+              We Don&apos;t Replace Your Team We
+              <br className="hidden md:block" />
+              Clone Your Best Employee.
+            </Text>
+          </div>
           {/* Sub-headline */}
-          <Text className="md:text-[24px] md:leading-[120%] mb-[60px] text-center  font-normal">
-            We Integrate Top-Tier Technologies (OpenAI GPT-4o, Vapi.Ai) <br />{" "}
-            Directly Into Your Existing Phone Lines.
-          </Text>
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            <Text className="md:text-[24px] md:leading-[120%] md:mb-[60px] mb-[30px] text-center  font-normal">
+              We Integrate Top-Tier Technologies (OpenAI GPT-4o, Vapi.Ai){" "}
+              <br className="hidden md:block" /> Directly Into Your Existing
+              Phone Lines.
+            </Text>
+          </div>
 
           {/* Feature Boxes  */}
-          <div className="flex flex-col md:flex-row gap-4 items-stretch">
+          <div
+            className="flex flex-col md:flex-row gap-4 items-stretch"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
             {/* Left Column - Two boxes stacked */}
             <div className="flex flex-col gap-6 w-full md:max-w-[745px] ">
               {/* Top-Left Box */}
@@ -67,7 +76,7 @@ const CloneYourEmployee = () => {
                 <ReceptionistIcon className="mb-2" />
                 <Text
                   as="h2"
-                  className="md:text-[26px] md:leading-[44px] font-semibold capitalize mb-2"
+                  className="text-[20px] md:text-[26px] md:leading-[44px] font-semibold capitalize mb-2"
                 >
                   The 24/7 Digital Receptionist
                 </Text>
@@ -110,7 +119,7 @@ const CloneYourEmployee = () => {
                 <AnalystIcon className="mb-2" />
                 <Text
                   as="h2"
-                  className="md:text-[26px] md:leading-[44px] font-semibold capitalize mb-2"
+                  className="text-[20px] md:text-[26px] md:leading-[44px] font-semibold capitalize mb-2"
                 >
                   The Intelligent Analyst
                 </Text>
@@ -154,7 +163,7 @@ const CloneYourEmployee = () => {
               <CustomAgentIcon className="mb-2" />
               <Text
                 as="h2"
-                className="md:text-[26px] md:leading-[44px] font-semibold capitalize mb-2"
+                className="text-[20px] md:text-[26px] md:leading-[44px] font-semibold capitalize mb-2"
               >
                 The Automated Operator
               </Text>

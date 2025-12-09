@@ -10,7 +10,7 @@ import Button from "@/components/ui/Button";
 
 const DigitalBlueprintHero = () => {
   return (
-    <section className="relative w-full bg-white overflow-hidden h-[508px]">
+    <section className="relative w-full bg-white overflow-hidden md:min-h-[508px] min-h-[400px]">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <Image src={heroBg} alt="Hero Background" fill priority />
@@ -26,6 +26,9 @@ const DigitalBlueprintHero = () => {
         <div className="flex flex-col items-center text-center ">
           {/* Rating Badge */}
           <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
             className="flex items-center justify-center bg-white border shadow-[0px_4px_10px_0px_#0000001A]
  border-[#E1E3E8] rounded-full w-[145px] h-[35px] mb-[12px]"
           >
@@ -35,28 +38,37 @@ const DigitalBlueprintHero = () => {
           </div>
 
           {/* Main Heading */}
-          <Text as="h1" className="text-black mb-2 leading-[76px]">
-            From Static Code to Living
-            <br />
-            Intelligence
-          </Text>
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            <Text
+              as="h1"
+              className="text-black mb-2 md:leading-[76px] leading-[33px]"
+            >
+              From Static Code to Living
+              <br className="hidden md:block" />
+              Intelligence
+            </Text>
+          </div>
 
           {/* Description */}
-          <Text className="text-[20px] leading-[32px] font-normal">
-            We don&apos;t just &quot;turn on a bot.&quot; We engineer a custom
-            intelligence layer that integrates seamlessly with your
-            <br className="hidden md:block" /> existing technology stack. We
-            design it, we build it, we feed it, and we maintain it.
-          </Text>
+          <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <Text className="md:text-[20px] text-[16px] md:leading-[32px] leading-[22px] font-normal">
+              We don&apos;t just &quot;turn on a bot.&quot; We engineer a custom
+              intelligence layer that integrates seamlessly with your
+              <br className="hidden md:block" /> existing technology stack. We
+              design it, we build it, we feed it, and we maintain it.
+            </Text>
+          </div>
 
           {/* CTA Section */}
 
-          <Button
-            className="w-[262px] h-[61px] flex justify-center items-center mt-[30px] border border-[#FAC11D] shadow-[0px_5px_10px_0px_#00000026]
+          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+            <Button
+              className="w-full md:w-[262px] md:h-[61px] h-[49px] flex justify-center items-center mt-[30px] border border-[#FAC11D] shadow-[0px_5px_10px_0px_#00000026]
 "
-          >
-            Start Your Build
-          </Button>
+            >
+              Start Your Build
+            </Button>
+          </div>
         </div>
       </div>
     </section>

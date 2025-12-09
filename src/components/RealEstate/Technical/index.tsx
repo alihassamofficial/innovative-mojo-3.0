@@ -60,9 +60,9 @@ const Technical = () => {
                 Automated Lead Nurturing
               </Text>
               <Text className="text-white text-[16px] md:text-[22px] leading-[24px] md:leading-[28px] font-normal font-mona-sans">
-                Lead Nurturing: If a caller isn't ready to buy today, the AI
-                tags them for a long-term drip campaign so you stay top-of-mind
-                automatically.
+                Lead Nurturing: If a caller isn&apos;t ready to buy today, the
+                AI tags them for a long-term drip campaign so you stay
+                top-of-mind automatically.
               </Text>
             </div>
           </div>

@@ -22,7 +22,7 @@ import {
 const Footer = () => {
   const currentpathname = usePathname();
   return (
-    <footer className="relative bg-black w-full text-white mx-auto py-[144px]  flex justify-center items-center">
+    <footer className="relative bg-black w-full text-white mx-auto py-[50px] md:py-[144px]  flex justify-center items-center">
       {/* Footer Content */}
       <div className="max-w-[1240px]  relative w-full  ">
         <div className="px-5  flex flex-col md:flex-row md:gap-20 mt-10 md:mt-0 text-left  md:text-center ">
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
 
           {/* Right Section */}
-          <div className="flex flex-col md:flex-row md:gap-20 mt-10 md:mt-0 text-left mob:text-center mob:flex-col md:text-center mob:items-center mob:w-full mob:gap-[18px]">
+          <div className="flex flex-col md:flex-row gap-y-[16px] md:gap-20 mt-10 md:mt-0 text-left mob:text-center mob:flex-col md:text-center mob:items-center mob:w-full mob:gap-[18px]">
             {/* Links */}
             <div className="w-full md:max-w-[180px]  text-center md:text-left flex flex-col gap-[15px]">
               <Link href="/">
@@ -125,7 +125,7 @@ const Footer = () => {
               </div>
 
               {/* Social Media Icons */}
-              <div className="flex gap-x-[20px] mt-[20px]">
+              <div className="flex justify-center md:justify-start gap-x-[20px] mt-[20px]">
                 <Link href="">
                   <FacebookSolidIcon />
                 </Link>

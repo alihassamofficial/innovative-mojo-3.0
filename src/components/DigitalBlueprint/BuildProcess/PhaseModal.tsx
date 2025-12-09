@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 import Text from "@/components/ui/Text";
@@ -25,6 +25,8 @@ const PhaseModal: React.FC<PhaseModalProps> = ({
   description,
   bulletPoints,
 }) => {
+  const [isAnimating, setIsAnimating] = useState(false);
+
   // Lock body scroll when modal is open
   useEffect(() => {
     if (isOpen) {
@@ -36,8 +38,14 @@ const PhaseModal: React.FC<PhaseModalProps> = ({
       document.body.style.width = "100%";
       document.body.style.overflow = "hidden";
 
+      // Trigger animation after a small delay
+      setTimeout(() => {
+        setIsAnimating(true);
+      }, 10);
+
       // Cleanup function to restore scroll when modal closes
       return () => {
+        setIsAnimating(false);
         // Restore scroll position
         document.body.style.position = "";
         document.body.style.top = "";
@@ -62,20 +70,29 @@ const PhaseModal: React.FC<PhaseModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 "
+      className={`fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 transition-opacity duration-300 ${
+        isAnimating ? "opacity-100" : "opacity-0"
+      }`}
       onClick={onClose}
     >
       <div
-        className="bg-secondary rounded-[20px] bg-[linear-gradient(180deg,#FFEDBE_0%,#E8BE45_100%)] border-2 border-[#E1E3E8]  py-[34px] px-[39px] max-w-[700px] w-full max-h-[90vh] overflow-y-auto relative"
+        className={`bg-secondary rounded-[20px] bg-[linear-gradient(180deg,#FFEDBE_0%,#E8BE45_100%)] border-2 border-[#E1E3E8] py-6 px-5 lg:py-[34px] lg:px-[39px] max-w-[700px] w-full max-h-[90vh] overflow-y-auto relative transition-all duration-300 ${
+          isAnimating
+            ? "opacity-100 scale-100 translate-y-0"
+            : "opacity-0 scale-95 translate-y-4"
+        }`}
         onClick={(e) => e.stopPropagation()}
-        // style={{
-        //   backgroundImage: `url(${modalBg.src})`,
-        //   backgroundSize: "contain",
-        //   backgroundPosition: "center",
-        // }}
       >
+        <div className="absolute z-0 top-0 left-0 w-full h-full">
+          <Image
+            src={modalBg}
+            alt="modal-bg"
+            fill
+            className="object-contain object-top"
+          />
+        </div>
         {/* Image */}
-        <div className="w-full h-[223px] relative overflow-hidden rounded-t-[10px] mb-[12px] bg-gray-200">
+        <div className="w-full h-[140px] lg:h-[223px] relative overflow-hidden rounded-t-[10px] mb-[12px] bg-gray-200">
           {imageSrc ? (
             <Image
               src={imageSrc}
@@ -101,7 +118,7 @@ const PhaseModal: React.FC<PhaseModalProps> = ({
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-[10px] right-[10px] z-10 w-[44px] h-[44px] flex items-center justify-center bg-white rounded-full cursor-pointer hover:bg-gray-100 transition-colors"
+            className="absolute top-[10px] right-[10px] z-10 md:w-[44px] md:h-[44px] w-[30px] h-[30px] flex items-center justify-center bg-white rounded-full cursor-pointer hover:bg-gray-100 transition-colors"
             aria-label="Close modal"
           >
             <CloseIcon />
@@ -109,26 +126,26 @@ const PhaseModal: React.FC<PhaseModalProps> = ({
         </div>
 
         {/* Content */}
-        <div className="px-[19px] ">
+        <div className="px-4 lg:px-[19px] relative z-10 ">
           {/* Title */}
-          <Text className="max-w-[433px] md:text-[32px] md:leading-[47px] mb-[10px] font-semibold">
+          <Text className="max-w-full lg:max-w-[433px] text-[24px] leading-[32px] lg:text-[32px] lg:leading-[47px] mb-[10px] font-semibold">
             {title}
           </Text>
 
           {/* Description */}
           {description && (
-            <Text className="md:text-[18px] md:leading-[28px] mb-[16px] font-normal ">
+            <Text className="text-[16px] leading-[24px] lg:text-[18px] lg:leading-[28px] mb-[16px] font-normal ">
               {description}
             </Text>
           )}
 
           {/* Bullet Points */}
           {bulletPoints && bulletPoints.length > 0 && (
-            <ul className="pl-[19px]">
+            <ul className="pl-4 lg:pl-[19px]">
               {bulletPoints.map((point, index) => {
                 return (
                   <li key={index} className="list-disc ">
-                    <Text className="md:text-[16px] md:leading-[26px] font-bold">
+                    <Text className="text-[14px] leading-[22px] lg:text-[16px] lg:leading-[26px] font-bold">
                       {point}
                     </Text>
                   </li>

@@ -9,25 +9,43 @@ import posterImg from "@/public/images/home/implementation/poster.png";
 const Implementation = () => {
   return (
     <>
-      <section className="relative w-full overflow-hidden">
+      <section className="relative w-full overflow-hidden mb-[74px] md:mb-0">
         <div className="max-w-[1240px] mx-auto  ">
           <div className="mt-[90px] px-5">
             {/* Main Headline */}
-            <Text
-              as="h2"
-              className="md:text-[48px] md:leading-[60px] font-semibold capitalize   mb-[8px] text-center"
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
             >
-              Implementation (The &quot;Retrofit&quot;)
-            </Text>
-
+              <Text
+                as="h2"
+                className="md:text-[48px] md:leading-[60px] font-semibold capitalize   mb-[8px] text-center"
+              >
+                Implementation <br className="md:hidden block" /> (The
+                &quot;Retrofit&quot;)
+              </Text>
+            </div>
             {/* Sub-headline */}
-            <Text className="md:text-[32px] md:leading-[44px]  text-center  font-normal">
-              We Don&apos;t Disrupt Your Business. We Upgrade It.
-            </Text>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="1000"
+            >
+              <Text className="md:text-[32px] md:leading-[44px]  text-center  font-normal">
+                We Don&apos;t Disrupt Your Business.{" "}
+                <br className="md:hidden block" /> We Upgrade It.
+              </Text>
+            </div>
           </div>
         </div>
       </section>
-      <div className="relative w-full bg-white overflow-hidden md:h-[424px] mt-[74px] ">
+      <div
+        className="relative w-full bg-white overflow-hidden md:h-[424px] mt-[74px] md:block hidden"
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+      >
         <div className="relative flex gap-0 justify-center">
           <div className="relative md:left-[3.8%]">
             <Image

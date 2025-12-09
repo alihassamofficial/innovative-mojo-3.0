@@ -20,7 +20,8 @@ const Problem = () => {
             <div className="relative w-full max-w-[815px] z-10 pl-[32px] pr-[72px] flex flex-col justify-center items-center min-h-[425px]">
               <Text className="text-[#050000] text-[20px] leading-[32px] font-normal mb-[50px]">
                 You are in the middle of a walkthrough with a high-value client.
-                Your phone buzzes. It's a new lead calling from a listing site.
+                Your phone buzzes. It&apos;s a new lead calling from a listing
+                site.
               </Text>
               <ul className="list-disc pl-5">
                 <li className="text-[#050000] text-[20px] leading-[32px] font-bold">

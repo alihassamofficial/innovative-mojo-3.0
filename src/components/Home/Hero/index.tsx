@@ -18,7 +18,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full bg-white overflow-hidden min-h-[808px]">
+    <section className="relative w-full bg-white overflow-hidden md:min-h-[808px]">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <Image src={heroBg} alt="Hero Background" fill priority />
@@ -28,7 +28,12 @@ const Hero = () => {
       <div className="relative max-w-[1240px] mx-auto px-5 py-20 md:pt-[65px] md:pb-[235  px]">
         <div className="flex flex-col items-center text-center ">
           {/* Rating Badge */}
-          <div className="flex items-center justify-center gap-2 bg-white border border-[#E1E3E8] rounded-full w-[185px] h-[35px] mb-[30px]">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            className="flex items-center justify-center gap-2 bg-white border border-[#E1E3E8] rounded-full w-[185px] h-[35px] mb-[30px]"
+          >
             <GoogleRatingIcon />
 
             <div className="flex items-center gap-1">
@@ -47,32 +52,47 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <Text as="h1" className=" mb-2">
-            We Build Digital
-            <br />
-            <span className="text-black">Workforces Not Websites</span>
-          </Text>
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            <Text as="h1" className=" mb-2">
+              We Build Digital
+              <br />
+              <span className="text-black">Workforces Not Websites</span>
+            </Text>
+          </div>
 
           {/* Description */}
-          <Text className="text-[20px] leading-[32px] font-normal">
-            Stop bleeding revenue to missed calls. Innovative Mojo deploys
-            enterprise-grade AI Voice Agents that answer phones,
-            <br /> qualify leads, and book appointments 24/7. Your human team
-            needs sleep. Your business doesn&apos;t.
-          </Text>
+          <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <Text className="text-[16px] md:text-[20px] leading-[22px] md:leading-[32px] font-normal">
+              Stop bleeding revenue to missed calls. Innovative Mojo deploys
+              enterprise-grade AI Voice Agents that answer phones,
+              <br /> qualify leads, and book appointments 24/7. Your human team
+              needs sleep. Your business doesn&apos;t.
+            </Text>
+          </div>
 
           {/* CTA Section */}
           <div className="flex flex-col items-center space-y-4 w-full max-w-md mt-[60px]">
-            <Text
-              as="h2"
-              className="mb-[9px] font-semibold md:text-[26px] md:leading-[100%]"
+            <div
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-duration="1000"
             >
-              Talk To Voice Agent
-            </Text>
+              <Text
+                as="h2"
+                className="mb-[9px] font-semibold md:text-[26px] md:leading-[100%]"
+              >
+                Talk To Voice Agent
+              </Text>
+            </div>
 
             {/* Phone Input */}
-            <div className="relative w-full mb-[9px]">
-              <div className="flex items-center bg-[#E1E3E833]/20 border border-[#E5BF5B] h-[75px] w-[464px] rounded-full overflow-hidden">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+              className="relative w-full mb-[9px]"
+            >
+              <div className="flex items-center bg-[#E1E3E833]/20 border border-[#E5BF5B] md:h-[75px] md:max-w-[464px] rounded-full overflow-hidden">
                 {/* Country Code Dropdown */}
                 <select
                   value={countryCode}
@@ -97,7 +117,7 @@ const Hero = () => {
                 {/* Call Button */}
                 <button
                   onClick={handleCall}
-                  className="w-14 h-14 bg-secondary cursor-pointer rounded-full flex items-center justify-center transition-colors duration-200  m-1 shrink-0"
+                  className="md:w-14 md:h-14 w-10 h-10 bg-secondary cursor-pointer rounded-full flex items-center justify-center transition-colors duration-200  m-1 shrink-0"
                   aria-label="Call voice agent"
                 >
                   <PhoneIcon />
@@ -106,9 +126,15 @@ const Hero = () => {
             </div>
 
             {/* Disclaimer */}
-            <Text className="text-[18px] leading-[100%] font-normal font-mona-sans">
-              Available 24/7 • No spam, ever
-            </Text>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="600"
+              data-aos-duration="1000"
+            >
+              <Text className="text-[18px] leading-[100%] font-normal font-mona-sans">
+                Available 24/7 • No spam, ever
+              </Text>
+            </div>
           </div>
         </div>
       </div>

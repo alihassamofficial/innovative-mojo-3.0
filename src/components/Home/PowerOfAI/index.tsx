@@ -36,9 +36,9 @@ const PowerOfAI = () => {
       </div>
 
       <div className="relative max-w-[1240px] mx-auto ">
-        <div className="flex flex-col md:flex-row items-center gap-[57px] px-5">
+        <div className="flex flex-col-reverse md:flex-row items-center gap-[57px] px-5">
           {/* Left Section - Accordion Cards */}
-          <div className="flex flex-col gap-4 w-full">
+          <div className="flex flex-col gap-4 w-full" data-aos="fade-up">
             <Accordion
               type="single"
               collapsible
@@ -77,7 +77,10 @@ const PowerOfAI = () => {
           </div>
 
           {/* Right Section  */}
-          <div className=" flex flex-col justify-center w-full md:w-[380px] shrink-0">
+          <div
+            className=" flex flex-col justify-center w-full md:w-[380px] shrink-0"
+            data-aos="fade-left"
+          >
             {/* Main Title */}
             <Text
               as="h2"

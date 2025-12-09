@@ -18,17 +18,18 @@ const Card: React.FC<CardProps> = ({ title, image, onReadMore, className }) => {
   return (
     <div
       className={twMerge(
-        "bg-no-repeat bg-cover bg-center rounded-[20px] px-[23px] pt-[22px] pb-[25px] flex flex-col h-[360px] w-[512px]",
+        "bg-no-repeat bg-cover bg-center rounded-[20px] px-[23px] pt-[22px] pb-[25px] flex flex-col min-h-[320px] md:h-[360px] w-full md:w-[512px]",
         className
       )}
       style={{
         backgroundImage: `url(${cardBg.src})`,
-        backgroundSize: "contain",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
     >
       {/* Image */}
-      <div className="w-full h-[163px] rounded-[14px] mb-[9px] relative overflow-hidden">
+      <div className="w-full h-[140px] md:h-[163px] rounded-[14px] mb-[9px] relative overflow-hidden shrink-0">
         {image && (
           <Image
             src={image}
@@ -44,11 +45,12 @@ const Card: React.FC<CardProps> = ({ title, image, onReadMore, className }) => {
       </div>
 
       {/* Title */}
-      <Text className="md:text-[24px] md:leading-[36px] mb-[30px] font-semibold">
+      <Text className="text-[18px] md:text-[24px] leading-[26px] md:leading-[36px] mb-[15px] md:mb-[20px] font-semibold shrink-0">
         {title}
       </Text>
+
       {/* Read More Button */}
-      <div className="flex justify-between items-center pr-[10px] mt-auto">
+      <div className="flex justify-between items-center pr-[10px] mt-auto shrink-0">
         <button
           onClick={onReadMore}
           className="bg-black text-white rounded-full w-[129px] h-[35px] justify-center flex items-center gap-[10px] hover:bg-black/90 transition-colors duration-200 group"

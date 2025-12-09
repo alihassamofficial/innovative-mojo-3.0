@@ -32,15 +32,15 @@ export default function Navbar() {
         }}
       >
         <div className="max-w-[1240px] mx-auto px-5 py-[7px]">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between md:gap-4 gap-2">
             {/* Text */}
-            <Text className="md:text-[13px] md:leading-[100%]  font-normal font-mona-sans">
+            <Text className="text-[10px] md:text-[13px] md:leading-[100%]  font-normal font-mona-sans">
               Talk to our architects about custom AI voice agent deployment.
             </Text>
 
             {/* Book A Demo Button */}
             <Link href="/" className="shrink-0 flex items-center gap-[6px]">
-              <Text className="md:text-[13px] md:leading-[100%]  font-medium font-mona-sans">
+              <Text className="text-[10px] md:text-[13px] md:leading-[100%]  font-medium font-mona-sans">
                 Book A Demo
               </Text>
               <ArrowUpRightIcon className="w-3 h-3 text-white" />

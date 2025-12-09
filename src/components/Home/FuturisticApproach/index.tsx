@@ -14,9 +14,14 @@ const FuturisticApproach = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
+      data-aos="fade-in"
     >
       <div className="relative max-w-[1240px] mx-auto px-5">
-        <div className="flex flex-col items-center justify-center text-center">
+        <div
+          className="flex flex-col items-center justify-center text-center"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           {/* First Line */}
           <Text
             as="h2"

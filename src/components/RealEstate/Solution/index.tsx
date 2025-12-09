@@ -86,9 +86,9 @@ const Solution = () => {
         The Solution: The 24/7 Inside Sales Agent (ISA)
       </Text>
       <Text className="text-black md:text-[22px] leading-[32px] w-full max-w-[1014px] mb-[145px] text-center mx-auto">
-        We don't sell generic "answering services." We engineer intelligent AI
-        Agents that plug directly into your Follow Up Boss, kvCORE, or Lofty
-        CRM.
+        We don&apos;t sell generic &quot;answering services.&quot; We engineer
+        intelligent AI Agents that plug directly into your Follow Up Boss,
+        kvCORE, or Lofty CRM.
       </Text>
 
       <div
@@ -142,8 +142,9 @@ const Solution = () => {
                       Automated Showing Coordination
                     </Text>
                     <Text className="text-black text-[18px] font-normal">
-                      We don't sell generic "answering services." We engineer
-                      intelligent AI Agents that integrate with your CRM.
+                      We don&apos;t sell generic &quot;answering services.&quot;
+                      We engineer intelligent AI Agents that integrate with your
+                      CRM.
                     </Text>
                   </div>
                 </div>
@@ -161,20 +162,21 @@ const Solution = () => {
                   <div className="relative z-10 w-full px-8 min-h-[405px] flex flex-col justify-center">
                     <div className="w-[67px] h-[43px] bg-[#E8BE45] rounded-[8px] mb-[20px]" />
                     <Text className="text-black text-[24px] md:leading-[44px] font-semibold mb-2">
-                      The "Renter Firewall" <br /> (Property Management)
+                      The &quot;Renter Firewall&quot; <br /> (Property
+                      Management)
                     </Text>
                     <Text className="text-black text-[18px] font-normal">
                       Our AI handles all Tier-1 renter qualification for you.
                     </Text>
                     <ul className="list-disc pl-5 mt-3">
                       <li className="text-black text-[18px] font-normal">
-                        "Do you accept Section 8?"
+                        &quot;Do you accept Section 8?&quot;
                       </li>
                       <li className="text-black text-[18px] font-normal">
-                        "What are the move-in fees?"
+                        &quot;What are the move-in fees?&quot;
                       </li>
                       <li className="text-black text-[18px] font-normal">
-                        "Is it pet-friendly?"
+                        &quot;Is it pet-friendly?&quot;
                       </li>
                     </ul>
                   </div>
@@ -201,11 +203,11 @@ const Solution = () => {
                     </Text>
                     <ul className="list-disc pl-5 mt-3">
                       <li className="text-black text-[18px] font-normal">
-                        Caller: "How much is the house on Oak Street?"
+                        Caller: &quot;How much is the house on Oak Street?&quot;
                       </li>
                       <li className="text-black text-[18px] font-normal">
-                        AI: "It's listed at $650,000 and has a heated pool.
-                        Would you like to book a showing?"
+                        AI: &quot;It&apos;s listed at $650,000 and has a heated
+                        pool. Would you like to book a showing?&quot;
                       </li>
                     </ul>
                   </div>

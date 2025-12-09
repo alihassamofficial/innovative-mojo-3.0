@@ -112,8 +112,13 @@ const FourPhaseBuildProcessSlider: React.FC = () => {
   return (
     <div className="w-full">
       {/* Navigation Arrows - Top Right */}
-      <div className="pr-[100px]">
-        <div className="flex items-center justify-end gap-2 mb-[50px]">
+      <div className="pr-5 lg:pr-[100px]">
+        <div
+          className="flex items-center justify-end gap-2 mb-4 md:mb-[50px]"
+          data-aos="fade-in"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
           <button
             onClick={() => swiperRef.current?.slidePrev()}
             className="w-10 h-10 flex cursor-pointer items-center border-0 justify-center bg-none rounded-full  hover:bg-none transition-colors "
@@ -132,8 +137,13 @@ const FourPhaseBuildProcessSlider: React.FC = () => {
       </div>
 
       {/* Swiper */}
-      <div className="w-full overflow-x-hidden">
-        <div className="max-w-[1240px] mx-auto px-5 relative">
+      <div
+        className="w-full overflow-x-hidden md:overflow-x-visible"
+        data-aos="fade-left"
+        data-aos-delay="500"
+        data-aos-duration="1000"
+      >
+        <div className="max-w-[1240px] mx-auto pl-5 relative">
           <Swiper
             modules={[Autoplay, Navigation]}
             spaceBetween={20}
@@ -152,10 +162,7 @@ const FourPhaseBuildProcessSlider: React.FC = () => {
               swiperRef.current = swiper;
             }}
             onSlideChange={handleSlideChange}
-            className="pb-4! overflow-visible"
-            style={{
-              marginRight: "calc(-100vw + 1240px + 40px)",
-            }}
+            className="pb-4! overflow-visible mr-0! lg:mr-[calc(-100vw+1240px+40px)]!"
           >
             {phases.map((phase, index) => {
               // Ensure image src is properly formatted as string
@@ -164,7 +171,7 @@ const FourPhaseBuildProcessSlider: React.FC = () => {
               return (
                 <SwiperSlide
                   key={`${phase.title}-${index}`}
-                  className="w-[512px]! max-w-[512px] shrink-0"
+                  className="w-auto! md:w-[512px]! max-w-full! md:max-w-[512px]! shrink-0"
                 >
                   <Card
                     title={phase.title}
