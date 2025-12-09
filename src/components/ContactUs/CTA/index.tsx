@@ -31,10 +31,10 @@ const CTA = () => {
                     </Text>
 
                     {/* CTA Button */}
-                    <Link href="/talk-to-mojo">
+                    <Link href="#">
                         <Button className="shadow-[0px_5px_10px_0px_#00000026]  bg-[#E5BF5B] border flex items-center gap-[10px] border-[#FAC11D] text-black text-lg md:text-[20px] font-medium  px-8 py-4 rounded-[16px] font-mona-sans hover:bg-[#FAC11D] transition-colors w-[208px] h-[61px]">
                             <PhoneSolidIcon />
-                            Talk To Mojo
+                            Click To Dial
                         </Button>
                     </Link>
                 </div>
