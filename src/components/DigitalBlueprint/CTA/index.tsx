@@ -13,15 +13,7 @@ const DigitalBlueprintCTA = () => {
     <section className="relative w-full overflow-hidden  py-16 md:py-[124px] md:min-h-[604px] flex items-center justify-center">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
-        <Image
-          src={bgImage}
-          alt="CTA Background"
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        <Image src={bgImage} alt="CTA Background" fill priority />
       </div>
 
       {/* Content */}
@@ -36,14 +28,14 @@ const DigitalBlueprintCTA = () => {
           </Text>
 
           {/* Subtitle */}
-          <Text className="text-white text-[20px] md:text-[20px] md:leading-[32px] font-normal font-mona-sans mb-[40px] md:mb-[60px]">
+          <Text className="text-white capitalize text-[20px] md:text-[20px] md:leading-[32px] font-normal font-mona-sans mb-[40px] md:mb-[60px]">
             Don&apos;t just take our word for it. Talk to the technology we just
             described.
           </Text>
 
           {/* CTA Button */}
           <Link href="/talk-to-mojo">
-            <Button className="bg-secondary border border-[#FAC11D] flex items-center justify-center gap-2 text-black text-lg md:text-[20px] font-semibold  px-8 py-4 rounded-[16px] font-mona-sans hover:bg-[#FAC11D] transition-colors w-[234px] h-[60px]">
+            <Button className="bg-secondary border border-[#FAC11D] flex items-center justify-center gap-3 text-black text-lg md:text-[20px] font-medium  px-8 py-4 rounded-[16px] font-mona-sans hover:bg-[#FAC11D] transition-colors w-[234px] h-[61px]">
               <PhoneSolidIcon />
               Click To Demo
             </Button>

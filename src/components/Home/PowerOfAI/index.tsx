@@ -32,11 +32,11 @@ const PowerOfAI = () => {
     <section className="relative w-full bg-white py-20 md:py-[84px] overflow-hidden ">
       {/* Background radial lines effect */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <Image src={bgImage} alt="bg" fill className="object-cover" />
+        <Image src={bgImage} alt="bg" fill />
       </div>
 
       <div className="relative max-w-[1240px] mx-auto ">
-        <div className="flex flex-col md:flex-row items-start gap-[57px] px-5">
+        <div className="flex flex-col md:flex-row items-center gap-[57px] px-5">
           {/* Left Section - Accordion Cards */}
           <div className="flex flex-col gap-4 w-full">
             <Accordion
@@ -49,9 +49,9 @@ const PowerOfAI = () => {
                 <AccordionItem
                   key={item.id}
                   value={item.id}
-                  className="bg-white border border-black/10 transition-shadow w-full rounded-tr-[30px] rounded-bl-[30px] py-[26px"
-                  style={{ boxShadow: "0px 4px 4px 0px #0000001A" }}
-                  data-aos="fade-right"
+                  className="bg-white shadow-[0px_4px_4px_0px_#0000001A] transition-shadow w-full rounded-tr-[30px] rounded-bl-[30px] py-[26px"
+                  // style={{ boxShadow: "0px 4px 4px 0px #0000001A" }}
+                  // data-aos="fade-right"
                 >
                   <AccordionTrigger
                     showIcon={false}
@@ -77,7 +77,7 @@ const PowerOfAI = () => {
           </div>
 
           {/* Right Section  */}
-          <div className="pt-[50px] flex flex-col justify-center w-full md:w-[380px] shrink-0">
+          <div className=" flex flex-col justify-center w-full md:w-[380px] shrink-0">
             {/* Main Title */}
             <Text
               as="h2"
@@ -87,8 +87,9 @@ const PowerOfAI = () => {
             </Text>
 
             {/* Subtitle */}
-            <Text className="md:text-[20px] md:leading-[30px] font-normal  font-mona-sans">
-              The Math is Simple. You Are Losing Money.
+            <Text className="md:text-[20px] md:leading-[30px] font-normal  ">
+              Handle every call, qualify every lead and respond instant -
+              without adding staff or stress.
             </Text>
           </div>
         </div>

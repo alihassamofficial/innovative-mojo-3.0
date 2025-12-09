@@ -21,14 +21,7 @@ const Hero = () => {
     <section className="relative w-full bg-white overflow-hidden min-h-[808px]">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <Image
-          src={heroBg}
-          alt="Hero Background"
-          width={1440}
-          height={808}
-          className="w-full h-full object-cover"
-          priority
-        />
+        <Image src={heroBg} alt="Hero Background" fill priority />
       </div>
 
       {/* Content */}

@@ -8,8 +8,8 @@ import CoreCapabilitiesSlider from "./Slider";
 const CoreCapabilities = () => {
   return (
     <section className="relative overflow-hidden w-full bg-white py-20 md:pt-[118px] md:pb-[90px]">
-      <div className="pl-[14%]  ">
-        <div className="flex flex-col gap-x-[135px] md:flex-row items-start ">
+      <div className="max-w-[1240px] mx-auto  ">
+        <div className="flex flex-col gap-x-[135px] md:flex-row items-start px-5">
           {/* Left Section */}
           <div className="w-full md:w-[400px] shrink-0">
             {/* Label */}

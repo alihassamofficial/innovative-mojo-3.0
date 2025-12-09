@@ -44,7 +44,7 @@ const Text: React.FC<TextPropTypes> = (props) => {
   return (
     <p
       className={twMerge(
-        "text-primary text-[16px] leading-[22px] font-normal font-poppins",
+        "text-primary text-[16px] leading-[22px] font-normal font-mona-sans",
         className
       )}
       onClick={onClick}

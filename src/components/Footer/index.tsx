@@ -9,6 +9,11 @@ import { cn } from "@/lib/utils";
 import Text from "@/ui/Text";
 
 import logo from "@/public/images/navbar/mojo-logo.png";
+import {
+  FacebookSolidIcon,
+  InstagramSolidIcon,
+  LinkedInSolidIcon,
+} from "../ui/Icons";
 // import instagram from "@/public/images/footer/instagram.svg";
 // import facebook from "@/public/images/footer/facebook.svg";
 // import linkedin from "@/public/images/footer/linkedin.svg";
@@ -17,25 +22,21 @@ import logo from "@/public/images/navbar/mojo-logo.png";
 const Footer = () => {
   const currentpathname = usePathname();
   return (
-    <footer
-      className="relative bg-black w-full text-white mx-auto py-[144px]  flex justify-center items-center"
-      data-aos="fade-up"
-      data-aos-delay="200"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-    >
+    <footer className="relative bg-black w-full text-white mx-auto py-[144px]  flex justify-center items-center">
       {/* Footer Content */}
       <div className="max-w-[1240px]  relative w-full  ">
         <div className="px-5  flex flex-col md:flex-row md:gap-20 mt-10 md:mt-0 text-left  md:text-center ">
           {/* Left Section */}
           <div className="max-w-[600px] text-center md:text-left">
-            <Image
-              src={logo}
-              alt="Innovative Mojo"
-              width={136}
-              height={105}
-              className="mb-[30px] mx-auto md:mx-0 h-[105px] w-[136px]"
-            />
+            <Link href="/">
+              <Image
+                src={logo}
+                alt="Innovative Mojo"
+                width={136}
+                height={105}
+                className="mb-[30px] mx-auto md:mx-0 h-[105px] w-[136px]"
+              />
+            </Link>
 
             <Text
               as="h2"
@@ -124,19 +125,16 @@ const Footer = () => {
               </div>
 
               {/* Social Media Icons */}
-              <div className="flex gap-6 mt-[20px]">
-                {/* <Link href="#">
-                <Image src={facebook} alt="Facebook" width={30} height={30} />
-              </Link>
-              <Link href="#">
-                <Image src={instagram} alt="Instagram" width={30} height={30} />
-              </Link> */}
-                {/* <Link
-                className="mob:mx-auto"
-                href="https://www.linkedin.com/company/innovative-mojo/"
-              >
-                <Image src={linkedin} alt="LinkedIn" width={30} height={30} />
-              </Link> */}
+              <div className="flex gap-x-[20px] mt-[20px]">
+                <Link href="">
+                  <FacebookSolidIcon />
+                </Link>
+                <Link href="">
+                  <InstagramSolidIcon />
+                </Link>
+                <Link href="">
+                  <LinkedInSolidIcon />
+                </Link>
               </div>
             </div>
           </div>

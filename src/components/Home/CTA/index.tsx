@@ -6,21 +6,14 @@ import Text from "@/components/ui/Text";
 import Button from "@/ui/Button";
 
 import bgImage from "@/public/images/home/cta/bg.png";
+import { PhoneSolidIcon } from "@/components/ui/Icons";
 
 const CTA = () => {
   return (
     <section className="relative w-full overflow-hidden  py-16 md:py-[124px]">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
-        <Image
-          src={bgImage}
-          alt="CTA Background"
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        <Image src={bgImage} alt="CTA Background" fill priority />
       </div>
 
       {/* Content */}
@@ -40,7 +33,7 @@ const CTA = () => {
           </Text>
 
           {/* Call to Action Text */}
-          <Text className="text-white text-xl md:text-[32px] md:leading-[44px] font-normal font-mona-sans mb-8 md:mb-12 ">
+          <Text className="text-white text-xl md:text-[32px] md:leading-[44px] font-normal font-mona-sans mb-8 md:mb-[59px] ">
             Talk to <span className="font-bold">&quot;Mojo&quot;</span> right
             now. No forms. No waiting. Just tap the <br /> button and try to
             stump our AI.
@@ -48,7 +41,8 @@ const CTA = () => {
 
           {/* CTA Button */}
           <Link href="/talk-to-mojo">
-            <Button className="bg-secondary border border-[#FAC11D] text-black text-lg md:text-[20px] font-semibold  px-8 py-4 rounded-[16px] font-mona-sans hover:bg-[#FAC11D] transition-colors w-[244px] h-[60px]">
+            <Button className="shadow-[0px_5px_10px_0px_#00000026]  bg-[#E5BF5B] border flex items-center gap-[10px] border-[#FAC11D] text-black text-lg md:text-[20px] font-medium  px-8 py-4 rounded-[16px] font-mona-sans hover:bg-[#FAC11D] transition-colors w-[208px] h-[61px]">
+              <PhoneSolidIcon />
               Talk To Mojo
             </Button>
           </Link>

@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import Text from "@/components/ui/Text";
 
@@ -11,27 +10,37 @@ interface CardProps {
   title: string;
   image: string;
   readmoreLink?: string;
+  onReadMore?: () => void;
   className?: string;
 }
 
-const Card: React.FC<CardProps> = ({
-  title,
-  image,
-  readmoreLink,
-  className,
-}) => {
+const Card: React.FC<CardProps> = ({ title, image, onReadMore, className }) => {
   return (
     <div
       className={twMerge(
-        "bg-no-repeat bg-cover bg-center rounded-[20px] px-[23px] pt-[22px] pb-[13px] flex flex-col h-full w-[512px]",
-        className,
-        "bg-image-[url('/images/digital-bp/card-bg.png')]"
+        "bg-no-repeat bg-cover bg-center rounded-[20px] px-[23px] pt-[22px] pb-[25px] flex flex-col h-[360px] w-[512px]",
+        className
       )}
-      style={{ backgroundImage: `url(${cardBg.src})` }}
+      style={{
+        backgroundImage: `url(${cardBg.src})`,
+        backgroundSize: "contain",
+        backgroundPosition: "center",
+      }}
     >
       {/* Image */}
-      <div className="w-full h-[163px] border-[0.5px] border-black/20 rounded-[10px] mb-[18px] relative overflow-hidden">
-        <Image src={image} alt={title} fill className="object-cover" />
+      <div className="w-full h-[163px] rounded-[14px] mb-[9px] relative overflow-hidden">
+        {image && (
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 512px) 100vw, 512px"
+            onError={(e) => {
+              console.error(`Image failed to load for ${title}:`, image);
+            }}
+          />
+        )}
       </div>
 
       {/* Title */}
@@ -39,9 +48,9 @@ const Card: React.FC<CardProps> = ({
         {title}
       </Text>
       {/* Read More Button */}
-      <div className="flex justify-start mt-auto">
-        <Link
-          href={readmoreLink || "#"}
+      <div className="flex justify-between items-center pr-[10px] mt-auto">
+        <button
+          onClick={onReadMore}
           className="bg-black text-white rounded-full w-[129px] h-[35px] justify-center flex items-center gap-[10px] hover:bg-black/90 transition-colors duration-200 group"
           aria-label={`Read more about ${title}`}
         >
@@ -54,14 +63,13 @@ const Card: React.FC<CardProps> = ({
               style={{ filter: "brightness(0) invert(1)" }}
             />
           </div>
-        </Link>
-      </div>
+        </button>
 
-      {/* Read More Link */}
-      <div className="flex justify-end mt-auto mr-[10px]">
-        <Link href={readmoreLink || ""}>
-          <RightArrowIcon />
-        </Link>
+        <div>
+          <button onClick={onReadMore} aria-label={`View ${title}`}>
+            <RightArrowIcon />
+          </button>
+        </div>
       </div>
     </div>
   );

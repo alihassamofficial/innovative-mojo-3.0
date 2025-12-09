@@ -13,26 +13,22 @@ const DigitalBlueprintHero = () => {
     <section className="relative w-full bg-white overflow-hidden h-[508px]">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <Image
-          src={heroBg}
-          alt="Hero Background"
-          width={1440}
-          height={808}
-          className="w-full h-full"
-          priority
-        />
+        <Image src={heroBg} alt="Hero Background" fill priority />
       </div>
 
       {/* Border Image - positioned at bottom */}
       <div className="absolute bottom-0 left-0 w-full">
-        <Image src={border} alt="border" className="w-full" />
+        <Image src={border} alt="border" className=" object-contain mx-auto" />
       </div>
 
       {/* Content */}
       <div className="relative max-w-[1240px] mx-auto px-5 py-20">
         <div className="flex flex-col items-center text-center ">
           {/* Rating Badge */}
-          <div className="flex items-center justify-center bg-white border border-[#E1E3E8] rounded-full w-[145px] h-[35px] mb-[12px]">
+          <div
+            className="flex items-center justify-center bg-white border shadow-[0px_4px_10px_0px_#0000001A]
+ border-[#E1E3E8] rounded-full w-[145px] h-[35px] mb-[12px]"
+          >
             <Text className="text-[13px] font-medium leading-none text-primary">
               Digital Blueprint
             </Text>
@@ -55,7 +51,10 @@ const DigitalBlueprintHero = () => {
 
           {/* CTA Section */}
 
-          <Button className="w-[262px] h-[61px] flex justify-center items-center mt-[30px]">
+          <Button
+            className="w-[262px] h-[61px] flex justify-center items-center mt-[30px] border border-[#FAC11D] shadow-[0px_5px_10px_0px_#00000026]
+"
+          >
             Start Your Build
           </Button>
         </div>

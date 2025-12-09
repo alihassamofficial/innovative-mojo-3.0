@@ -4,8 +4,8 @@ import Image from "next/image";
 import Text from "@/components/ui/Text";
 
 import problemBg from "@/public/images/real-estate/problembg.png";
-import problemIcon from "@/public/images/real-estate/problem.png";
-import bgImage from "@/public/images/home/futuristic-approach/bg.png";
+// import problemIcon from "@/public/images/real-estate/problem.png";
+import posterImg from "@/public/images/home/implementation/poster.png";
 const Implementation = () => {
   return (
     <>
@@ -15,7 +15,7 @@ const Implementation = () => {
             {/* Main Headline */}
             <Text
               as="h2"
-              className="md:text-[48px] md:leading-[60px] font-semibold capitalize tracking-[-1px]  mb-[8px] text-center"
+              className="md:text-[48px] md:leading-[60px] font-semibold capitalize   mb-[8px] text-center"
             >
               Implementation (The &quot;Retrofit&quot;)
             </Text>
@@ -35,19 +35,17 @@ const Implementation = () => {
               alt="problemBg"
               className="w-full absolute inset-0 max-w-[818px] h-[425px]"
             />
-            <div className="relative w-full max-w-[815px] z-10 pl-[0px] pr-[72px] flex flex-col justify-center items-center min-h-[425px]">
-              <Text className="text-[#050000] text-[20px] leading-[32px] font-normal mb-[50px]">
+            <div className="relative w-full max-w-[815px] z-10 pl-[20px]  pr-[72px] flex flex-col justify-center items-start min-h-[425px]">
+              <Text className="text-[#050000] text-[20px]  leading-[32px] font-normal mb-[50px]">
                 You don&apos;t need a new website or a new phone number. We act
-                as <br />
-                the &quot;Intelligence Layer&quot; on top of what you already
-                have. site.
+                as the <br />
+                &quot;Intelligence Layer&quot; on top of what you already have.
               </Text>
-              <ul className="list-disc pl-[70px]">
+              <ul className="list-disc pl-[20px]">
                 <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
                   Web Integration: We embed AI widgets into your site to turn
                   clicks into conversations.
                 </li>
-                <br />
                 <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
                   CRM Sync: We map the AI&apos;s data directly to your database
                   fields.
@@ -61,8 +59,8 @@ const Implementation = () => {
           </div>
           <div>
             <Image
-              src={problemIcon}
-              alt="problemIcon"
+              src={posterImg}
+              alt="posterImg"
               className="w-full max-w-[504px]"
             />
           </div>

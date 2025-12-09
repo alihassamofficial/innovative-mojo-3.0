@@ -7,6 +7,8 @@ import { AnalystIcon, CustomAgentIcon, ReceptionistIcon } from "@/ui/Icons";
 
 import cardBg from "@/public/images/home/clone-your-employe/card-bg.png";
 import cardBgBottom from "@/public/images/home/clone-your-employe/vertical-card-bg.png";
+import hrCardBorder from "@/public/images/home/clone-your-employe/hr-card-border.png";
+import vrCardBorder from "@/public/images/home/clone-your-employe/vr-card-border.png";
 
 const CloneYourEmployee = () => {
   return (
@@ -35,14 +37,33 @@ const CloneYourEmployee = () => {
             <div className="flex flex-col gap-6 w-full md:max-w-[745px] ">
               {/* Top-Left Box */}
               <div
-                className="bg-[#F1F4F9] rounded-[10px] p-6 md:px-[38px] md:pt-[56px] flex flex-col"
+                className="bg-[#F1F4F9] rounded-[10px] p-6 md:px-[38px] md:pt-[56px] flex flex-col relative"
                 style={{
                   backgroundImage: `url(${cardBg.src})`,
                   backgroundSize: "contain",
-                  backgroundPosition: "center",
+                  backgroundPosition: "top",
                   backgroundRepeat: "no-repeat",
                 }}
               >
+                <div
+                  className="absolute top-0 left-0 w-full h-full"
+                  style={{
+                    backgroundImage: `url(${hrCardBorder.src})`,
+                    backgroundSize: "contain",
+                    backgroundPosition: "top",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                />
+                <div
+                  className="absolute bottom-0  left-0 w-full h-full"
+                  style={{
+                    backgroundImage: `url(${hrCardBorder.src})`,
+                    backgroundSize: "contain",
+                    backgroundPosition: "bottom",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                />
+
                 <ReceptionistIcon className="mb-2" />
                 <Text
                   as="h2"
@@ -50,8 +71,8 @@ const CloneYourEmployee = () => {
                 >
                   The 24/7 Digital Receptionist
                 </Text>
-                <Text className="md:text-[20px] md:leading-[30px] font-mona-sans  mb-2 w-full md:max-w-[487px]">
-                  Eliminate hold times. Our Voice AI answers instantly with
+                <Text className="md:text-[20px] md:leading-[30px] font-mona-sans capitalize  mb-2 w-full md:max-w-[490px]">
+                  Eliminate hold times. Our Voice AI answers instantly with &lt;
                   1-second latency, engaging callers with human-level natural
                   language. It handles intake, answers FAQs, and routes calls
                   professionally.
@@ -60,14 +81,32 @@ const CloneYourEmployee = () => {
 
               {/* Bottom-Left Box */}
               <div
-                className="bg-[#F1F4F9] rounded-[10px] p-6 md:px-[38px] md:pt-[56px] flex flex-col"
+                className="bg-[#F1F4F9] rounded-[10px] p-6 md:px-[38px] md:pt-[56px] flex flex-col relative"
                 style={{
                   backgroundImage: `url(${cardBg.src})`,
                   backgroundSize: "contain",
-                  backgroundPosition: "center",
+                  backgroundPosition: "top",
                   backgroundRepeat: "no-repeat",
                 }}
               >
+                <div
+                  className="absolute top-0 left-0 w-full h-full"
+                  style={{
+                    backgroundImage: `url(${hrCardBorder.src})`,
+                    backgroundSize: "contain",
+                    backgroundPosition: "top",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                />
+                <div
+                  className="absolute bottom-0 left-0 w-full h-full"
+                  style={{
+                    backgroundImage: `url(${hrCardBorder.src})`,
+                    backgroundSize: "contain",
+                    backgroundPosition: "bottom",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                />
                 <AnalystIcon className="mb-2" />
                 <Text
                   as="h2"
@@ -75,7 +114,7 @@ const CloneYourEmployee = () => {
                 >
                   The Intelligent Analyst
                 </Text>
-                <Text className="md:text-[20px] md:leading-[30px] font-mona-sans  mb-2 w-full md:max-w-[487px]">
+                <Text className="md:text-[20px] md:leading-[30px] font-mona-sans  mb-2 w-full md:max-w-[490px] capitalize">
                   Resources are best spent on qualified prospects. Our system
                   acts as a gatekeeper, asking the hard questions (&quot;What is
                   your budget&quot;, &quot;Do you have a case&quot;) before the
@@ -86,7 +125,7 @@ const CloneYourEmployee = () => {
 
             {/* Right Box - Taller, spans height of both left boxes */}
             <div
-              className="bg-[#F1F4F9] rounded-[10px]  p-6 md:px-[38px] md:pt-[56px] flex flex-col w-full md:max-w-[484px]"
+              className="bg-[#F1F4F9] rounded-[10px]  p-6 md:px-[38px] md:pt-[56px] flex flex-col w-full md:max-w-[484px] relative"
               style={{
                 backgroundImage: `url(${cardBgBottom.src})`,
                 backgroundSize: "contain",
@@ -94,6 +133,24 @@ const CloneYourEmployee = () => {
                 backgroundRepeat: "no-repeat",
               }}
             >
+              <div
+                className="absolute top-0 left-0 w-full h-full"
+                style={{
+                  backgroundImage: `url(${vrCardBorder.src})`,
+                  backgroundSize: "contain",
+                  backgroundPosition: "top",
+                  backgroundRepeat: "no-repeat",
+                }}
+              />
+              <div
+                className="absolute bottom-0 left-0 w-full h-full"
+                style={{
+                  backgroundImage: `url(${vrCardBorder.src})`,
+                  backgroundSize: "contain",
+                  backgroundPosition: "bottom",
+                  backgroundRepeat: "no-repeat",
+                }}
+              />
               <CustomAgentIcon className="mb-2" />
               <Text
                 as="h2"
@@ -101,7 +158,7 @@ const CloneYourEmployee = () => {
               >
                 The Automated Operator
               </Text>
-              <Text className="md:text-[20px] md:leading-[30px] font-mona-sans  mb-2 w-full md:max-w-[365px]">
+              <Text className="md:text-[20px] md:leading-[30px] font-mona-sans  mb-2 w-full md:max-w-[365px] capitalize">
                 Efficiency lies in the follow-through. Once a call concludes,
                 our architecture triggers immediate workflows: updating your CRM
                 (HubSpot/GoHighLevel), sending confirmation texts, and securing

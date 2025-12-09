@@ -19,7 +19,7 @@ const FourPhaseBuildProcess = () => {
           </Text>
 
           {/* Subtitle */}
-          <Text className="md:text-[18px] md:leading-[44px] font-normal ">
+          <Text className="md:text-[20px] md:leading-[32px] font-normal ">
             We handle 100% of the technical setup. You don&apos;t write a single
             line of code.
           </Text>

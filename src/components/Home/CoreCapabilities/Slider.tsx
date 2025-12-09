@@ -1,10 +1,14 @@
 "use client";
 
 import React from "react";
+import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
-import "swiper/css";
+import image1 from "@/public/images/home/core-capabilities/1.png";
+import image2 from "@/public/images/home/core-capabilities/2.png";
+import image3 from "@/public/images/home/core-capabilities/3.png";
+import image4 from "@/public/images/home/core-capabilities/4.png";
 
 import Card from "./Card";
 
@@ -14,7 +18,10 @@ interface Capability {
 }
 
 const CoreCapabilitiesSlider: React.FC = () => {
-  const capabilities: Capability[] = [
+  const baseImages = [image1, image2, image3, image4];
+  const images = [...baseImages, ...baseImages];
+
+  const baseCapabilities: Capability[] = [
     {
       title: "Natural conversations",
       description:
@@ -36,6 +43,7 @@ const CoreCapabilitiesSlider: React.FC = () => {
         "Smart call handling with queue management, voicemail logic,transfers, and supervisor controls at scale.",
     },
   ];
+  const capabilities = [...baseCapabilities, ...baseCapabilities];
 
   const handleCardClick = (title: string) => {
     console.log(`Clicked: ${title}`);
@@ -47,7 +55,6 @@ const CoreCapabilitiesSlider: React.FC = () => {
         modules={[Autoplay]}
         spaceBetween={20}
         slidesPerView="auto"
-        slidesPerGroup={1}
         speed={600}
         autoplay={{
           delay: 3000,
@@ -55,18 +62,17 @@ const CoreCapabilitiesSlider: React.FC = () => {
           pauseOnMouseEnter: true,
         }}
         loop={true}
-        loopAdditionalSlides={2}
-        watchSlidesProgress={true}
         className="pb-4!"
       >
         {capabilities.map((item, index) => (
           <SwiperSlide
-            key={index}
+            key={`${item.title}-${index}`}
             className="w-[323px]! max-w-[323px] shrink-0"
           >
             <Card
               title={item.title}
               description={item.description}
+              image={images[index]}
               onClick={() => handleCardClick(item.title)}
             />
           </SwiperSlide>
