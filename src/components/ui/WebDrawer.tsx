@@ -1,57 +1,54 @@
 "use client";
 
-import { CrossIcon, HamMenuIcon } from "@/ui/Icons";
+import { MenuCloseIcon, MenuIcon } from "@/ui/Icons";
 import {
   Drawer,
   DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerDescription,
   DrawerTrigger,
   DrawerClose,
 } from "@/ui/ShadCnDrawer";
-// import useDisclosure from "@/hooks/useDisclosure";
-// import { useState } from "react";
+
+import menuBg from "@/public/images/navbar/mob-menu-bg.png";
 
 interface WebDrawerProps {
   children?: React.ReactNode;
 }
 
 const WebDrawer = ({ children }: WebDrawerProps) => {
-  // const { isOpen } = useDisclosure();
-
-  // const [isOpen, setisOpen] = useState(false);
-
   return (
     <>
       {/* Drawer Trigger Button */}
-
       <Drawer direction="left">
         <DrawerTrigger asChild>
           <button className="p-2" aria-label="Open menu">
-            <HamMenuIcon />
+            <MenuIcon />
           </button>
         </DrawerTrigger>
 
         {/* Drawer Content */}
-        <DrawerContent className="h-full w-full max-w-none rounded-none border-none bg-white">
-          <DrawerHeader>
-            <DrawerTitle className="text-xl font-semibold">Menu</DrawerTitle>
-            <DrawerDescription className="text-[30px] text-black font-bold">
-              Leath
-            </DrawerDescription>
-          </DrawerHeader>
-
-          <div className="relative">
-            <div className="p-4 absolute right-0 -top-[70px]">
+        <DrawerContent className="h-full w-full max-w-none rounded-none border-none">
+          <div
+            className="relative h-full w-full flex flex-col"
+            style={{
+              backgroundImage: `url(${menuBg.src})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+            }}
+          >
+            {/* Close Icon - Top Right */}
+            <div className="absolute top-[57px] right-[34px] z-10">
               <DrawerClose asChild>
-                <button className="bg-transparent rounded-full">
-                  <CrossIcon />
+                <button className="bg-transparent p-2" aria-label="Close menu">
+                  <MenuCloseIcon />
                 </button>
               </DrawerClose>
             </div>
 
-            {children}
+            {/* Content */}
+            <div className="flex-1 flex flex-col pt-16 pb-8 px-6">
+              {children}
+            </div>
           </div>
         </DrawerContent>
       </Drawer>

@@ -26,6 +26,7 @@ const Card: React.FC<CardProps> = ({
   onClick,
 }) => {
   return (
+    // <ShimmerDiv>
     <div
       className={twMerge(
         "bg-[#F1F4F9] rounded-[20px] px-[23px] pt-[22px] pb-[13px] flex flex-col min-h-[366px] w-[326px] relative",
@@ -87,6 +88,7 @@ const Card: React.FC<CardProps> = ({
         </button>
       </div>
     </div>
+    // </ShimmerDiv>
   );
 };
 

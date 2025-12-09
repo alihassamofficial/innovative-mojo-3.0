@@ -10,13 +10,14 @@ import { PhoneSolidIcon, ArrowUpRightIcon } from "@/ui/Icons";
 import WebDrawer from "@/ui/WebDrawer";
 
 import logo from "@/public/images/navbar/mojo-logo.png";
+import border from "@/public/images/navbar/border.png";
 
 export default function Navbar() {
   const pathname = usePathname();
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Real EState", href: "/real-estate" },
+    { label: "Real State", href: "/real-estate" },
     { label: "Legal Solutions", href: "/legal-solutions" },
     { label: "Digital Blueprint", href: "/digital-blueprint" },
     { label: "Contact", href: "/contact-us" },
@@ -107,31 +108,59 @@ export default function Navbar() {
       </header>
 
       {/* Mobile Navigation */}
-      <header className=" hidden w-full items-center justify-between px-5 pt-16 pb-[54px] lg:hidden">
+      <header className=" flex w-full items-center justify-between px-5 py-[24px]  lg:hidden">
         <Link href="/">
           <Image
             src="/navbar/mojo-logo.png"
             alt="Innovative Mojo"
-            width={150}
-            height={45}
-            className="h-auto w-auto"
+            width={78}
+            height={61}
+            className="h-[61px] w-[78px]"
             priority
           />
         </Link>
 
         {/* Drawer Trigger Button */}
         <WebDrawer>
-          <nav className="flex flex-col gap-4 px-6 py-4 text-lg font-medium text-background">
-            {navLinks.map(({ label, href }) => (
-              <Link key={label} href={href}>
-                {label}
+          <nav className="flex flex-col h-full">
+            {/* Navigation Links */}
+            <div className="flex flex-col flex-1">
+              {navLinks.map(({ label, href }, index) => {
+                const isActive =
+                  pathname === href ||
+                  (href !== "/" && pathname?.startsWith(href));
+
+                return (
+                  <div key={label}>
+                    <Link
+                      href={href}
+                      className={`block py-5 text-center text-black text-[16px] leading-[28px] font-normal  transition-colors duration-200 ${
+                        isActive ? "font-semibold" : ""
+                      }`}
+                    >
+                      {label}
+                    </Link>
+
+                    <div
+                      className="h-[2px] w-full"
+                      style={{
+                        backgroundImage: `url(${border.src})`,
+                        backgroundSize: "100% 100%",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                      }}
+                    />
+                  </div>
+                );
+              })}
+              {/* CTA Button */}
+              <Link href="/contact-us" className="block mt-[27px]">
+                <Button className=" w-[190px] mx-auto rounded-[10px] h-[50px] flex items-center justify-center gap-[7px] text-black text-[15px] leading-[28px] font-medium font-mona-sans shadow-[0px_5px_10px_0px_#00000026] transition-opacity duration-200 hover:opacity-90">
+                  <PhoneSolidIcon />
+                  Call The AI Now
+                </Button>
               </Link>
-            ))}
-            <Link href="/contact-us" className="mt-2">
-              <Button className="bg-secondary text-black w-full">
-                Call The AI Now
-              </Button>
-            </Link>
+            </div>
           </nav>
         </WebDrawer>
       </header>

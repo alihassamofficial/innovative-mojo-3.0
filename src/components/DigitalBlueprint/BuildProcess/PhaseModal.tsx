@@ -92,7 +92,7 @@ const PhaseModal: React.FC<PhaseModalProps> = ({
           />
         </div>
         {/* Image */}
-        <div className="w-full h-[140px] lg:h-[223px] relative overflow-hidden rounded-t-[10px] mb-[12px] bg-gray-200">
+        <div className="w-full h-[140px] lg:h-[223px] relative overflow-hidden rounded-[10px] mb-[12px] bg-gray-200">
           {imageSrc ? (
             <Image
               src={imageSrc}
@@ -128,7 +128,7 @@ const PhaseModal: React.FC<PhaseModalProps> = ({
         {/* Content */}
         <div className="px-4 lg:px-[19px] relative z-10 ">
           {/* Title */}
-          <Text className="max-w-full lg:max-w-[433px] text-[24px] leading-[32px] lg:text-[32px] lg:leading-[47px] mb-[10px] font-semibold">
+          <Text className="max-w-full lg:max-w-[433px] text-[24px] leading-[32px] md:text-[32px] md:leading-[42px]  mb-[10px] font-semibold">
             {title}
           </Text>
 
@@ -145,7 +145,7 @@ const PhaseModal: React.FC<PhaseModalProps> = ({
               {bulletPoints.map((point, index) => {
                 return (
                   <li key={index} className="list-disc ">
-                    <Text className="text-[14px] leading-[22px] lg:text-[16px] lg:leading-[26px] font-bold">
+                    <Text className="text-[14px] leading-[22px] md:text-[17px] md:leading-[26px] font-bold">
                       {point}
                     </Text>
                   </li>

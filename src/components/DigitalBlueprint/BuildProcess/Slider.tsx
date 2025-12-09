@@ -143,7 +143,7 @@ const FourPhaseBuildProcessSlider: React.FC = () => {
         data-aos-delay="500"
         data-aos-duration="1000"
       >
-        <div className="max-w-[1240px] mx-auto pl-5 relative">
+        <div className="max-w-[1240px] mx-auto px-5 relative">
           <Swiper
             modules={[Autoplay, Navigation]}
             spaceBetween={20}

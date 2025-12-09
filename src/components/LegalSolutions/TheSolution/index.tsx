@@ -111,7 +111,7 @@ const TheSolution = () => {
                   <div className="overflow-hidden">
                     <div className="text-[14px] leading-[22px] font-normal font-mona-sans text-black block transform translate-y-0 opacity-100 max-h-[400px] md:translate-y-4 md:opacity-0 md:max-h-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-hover:max-h-[400px] transition-all duration-500 ease-in-out">
                       {typeof solution.description === "string" ? (
-                        <Text className="text-[14px] leading-[22px] font-normal font-mona-sans text-black ">
+                        <Text className="text-[16px] leading-[22px] font-normal font-mona-sans text-black ">
                           {solution.description}
                         </Text>
                       ) : (

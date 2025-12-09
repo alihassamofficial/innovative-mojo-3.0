@@ -159,6 +159,11 @@ body {
   }
 }
 
+/* Prevent layout shift when drawer opens - reserve space for scrollbar */
+html {
+  scrollbar-gutter: stable;
+}
+
 @keyframes accordion-down {
   from {
     height: 0;

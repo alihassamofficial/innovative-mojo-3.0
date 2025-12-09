@@ -12,7 +12,7 @@ export interface ShimmerButtonProps extends ComponentPropsWithoutRef<"button"> {
   children?: React.ReactNode;
 }
 
-export const ShimmerDiv = React.forwardRef<
+export const ShimmerButton = React.forwardRef<
   HTMLButtonElement,
   ShimmerButtonProps
 >(
@@ -23,7 +23,7 @@ export const ShimmerDiv = React.forwardRef<
       shimmerDuration = "3s",
       borderRadius = "8px",
       // background = "rgba(0, 0, 0, 1)",
-      background = "",
+      background = "#076F26",
       className,
       children,
       ...props
@@ -31,7 +31,7 @@ export const ShimmerDiv = React.forwardRef<
     ref
   ) => {
     return (
-      <section
+      <button
         style={
           {
             "--spread": "90deg",
@@ -43,7 +43,7 @@ export const ShimmerDiv = React.forwardRef<
           } as CSSProperties
         }
         className={cn(
-          "group relative z-0  cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap border border-white/10 px-6 py-3 text-white bg-[#076F26] dark:text-black",
+          "group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap border border-white/10 px-6 py-3 text-white bg-[#076F26] dark:text-black",
           "transform-gpu transition-transform duration-300 ease-in-out active:translate-y-px",
           className
         )}
@@ -89,9 +89,9 @@ export const ShimmerDiv = React.forwardRef<
             "absolute -z-20 [background:var(--bg)]  [inset:var(--cut)]"
           )}
         />
-      </section>
+      </button>
     );
   }
 );
 
-ShimmerDiv.displayName = "ShimmerDiv";
+ShimmerButton.displayName = "ShimmerButton";

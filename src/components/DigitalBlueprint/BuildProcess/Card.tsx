@@ -1,10 +1,14 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import Text from "@/components/ui/Text";
 
 import cardBg from "@/public/images/digital-bp/card-bg.png";
+import cardBgMob from "@/public/images/digital-bp/card-bg-mob.png";
 import { RightArrowIcon, ArrowUpRightIcon } from "@/components/ui/Icons";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 interface CardProps {
   title: string;
@@ -15,21 +19,23 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ title, image, onReadMore, className }) => {
+  const isMobile = useIsMobile();
+
   return (
     <div
       className={twMerge(
-        "bg-no-repeat bg-cover bg-center rounded-[20px] px-[23px] pt-[22px] pb-[25px] flex flex-col min-h-[320px] md:h-[360px] w-full md:w-[512px]",
+        "bg-no-repeat bg-cover bg-center rounded-[20px] px-[18px] md:px-[23px] pt-[22px] pb-[25px] flex flex-col min-h-[320px] md:h-[360px] w-full md:w-[512px]",
         className
       )}
       style={{
-        backgroundImage: `url(${cardBg.src})`,
+        backgroundImage: `url(${isMobile ? cardBgMob.src : cardBg.src})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
     >
       {/* Image */}
-      <div className="w-full h-[140px] md:h-[163px] rounded-[14px] mb-[9px] relative overflow-hidden shrink-0">
+      <div className="w-full h-[140px] md:h-[163px] rounded-[14px] mb-[9px] relative overflow-hidden shrink-0 ">
         {image && (
           <Image
             src={image}
@@ -37,7 +43,7 @@ const Card: React.FC<CardProps> = ({ title, image, onReadMore, className }) => {
             fill
             className="object-cover"
             sizes="(max-width: 512px) 100vw, 512px"
-            onError={(e) => {
+            onError={() => {
               console.error(`Image failed to load for ${title}:`, image);
             }}
           />
@@ -50,7 +56,7 @@ const Card: React.FC<CardProps> = ({ title, image, onReadMore, className }) => {
       </Text>
 
       {/* Read More Button */}
-      <div className="flex justify-between items-center pr-[10px] mt-auto shrink-0">
+      <div className="flex justify-between items-center md:pr-[10px] mt-auto shrink-0">
         <button
           onClick={onReadMore}
           className="bg-black text-white rounded-full w-[129px] h-[35px] justify-center flex items-center gap-[10px] hover:bg-black/90 transition-colors duration-200 group"
@@ -69,7 +75,7 @@ const Card: React.FC<CardProps> = ({ title, image, onReadMore, className }) => {
 
         <div>
           <button onClick={onReadMore} aria-label={`View ${title}`}>
-            <RightArrowIcon />
+            <RightArrowIcon className="w-[26px] md:w-[42px] md:h-[26px]" />
           </button>
         </div>
       </div>
