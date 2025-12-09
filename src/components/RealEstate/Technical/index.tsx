@@ -35,9 +35,9 @@ const Technical = () => {
 
         {/* Two Text Boxes Container */}
         <div className="relative z-10 max-w-[1240px] mx-auto px-4 md:px-8 pt-8 md:pt-16 pb-16 md:pb-24">
-          <div className="flex gap-8">
+          <div className="flex gap-8 md:flex-row flex-col md:justify-start justify-center items-center">
             {/* Left Box - Automated CRM Write-Back */}
-            <div className=" rounded-lg border border-[#FFFFFF] w-full max-w-[351px] px-[37px] py-10">
+            <div className=" rounded-lg border border-[#FFFFFF] w-full md:max-w-[351px] max-w-full px-[37px] py-10">
               <Text
                 as="h3"
                 className="text-white text-[24px] md:text-[24px] font-semibold mb-4 font-mona-sans"
@@ -52,7 +52,7 @@ const Technical = () => {
             </div>
 
             {/* Right Box - Automated Lead Nurturing */}
-            <div className=" rounded-lg border border-[#FFFFFF] w-full max-w-[351px] px-[37px] py-10">
+            <div className="rounded-lg border border-[#FFFFFF] w-full md:max-w-[351px] max-w-full px-[37px] py-10">
               <Text
                 as="h3"
                 className="text-white text-[24px] md:text-[24px] font-semibold mb-4 font-mona-sans"

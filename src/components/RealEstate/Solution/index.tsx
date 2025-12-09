@@ -30,184 +30,250 @@ const Solution = () => {
 
     if (!cardsContainer || !pinContainer || !card3) return;
 
-    let scrollTrigger: ScrollTrigger | null = null;
+    const mm = gsap.matchMedia();
 
-    const initAnimation = () => {
+    // Desktop Animation
+    mm.add("(min-width: 768px)", () => {
       const cardsHeight = cardsContainer.scrollHeight;
       const viewportHeight = window.innerHeight;
 
-      // Center of last card
-      const lastCardHeight = card3.offsetHeight;
-      const lastCardCenter = cardsHeight - lastCardHeight / 2;
+      // Card 1 Metrics
+      const card1Height = card1Ref.current?.offsetHeight || 0;
+      const card1Top = card1Ref.current?.offsetTop || 0;
+      const card1Center = card1Top + card1Height / 2;
 
-      // Scroll distance needed so last card reaches center of screen
-      const maxYOffset = Math.max(0, lastCardCenter - viewportHeight / 2);
+      // Card 3 Metrics
+      const card3Height = card3Ref.current?.offsetHeight || 0;
+      const card3Top = card3Ref.current?.offsetTop || 0;
+      const card3Center = card3Top + card3Height / 2;
 
-      const animation = gsap.to(cardsContainer, {
-        y: -maxYOffset,
-        ease: "none",
+      // Calculate Start and End positions for the container
+      const startY = viewportHeight * 0.8 - card1Center;
+      const endY = viewportHeight * 0.5 - card3Center;
+      const travelDistance = startY - endY;
+      const maxYOffset = travelDistance;
+
+      const cards = [
+        { ref: card1Ref.current, offset: card1Ref.current?.offsetTop || 0 },
+        { ref: card2Ref.current, offset: card2Ref.current?.offsetTop || 0 },
+        { ref: card3Ref.current, offset: card3Ref.current?.offsetTop || 0 },
+      ];
+
+      const updateCardScales = (progress: number) => {
+        const currentY = startY - progress * travelDistance;
+        const viewportCenter = viewportHeight / 2;
+        const activeZone = viewportHeight * 0.5;
+
+        cards.forEach((card) => {
+          if (!card.ref) return;
+          const cardHeight = card.ref.offsetHeight;
+          const cardCenter = card.offset + cardHeight / 2;
+          const cardCenterInViewport = currentY + cardCenter;
+          const distanceFromCenter = Math.abs(
+            cardCenterInViewport - viewportCenter
+          );
+          let factor = 1 - distanceFromCenter / activeZone;
+          factor = Math.max(0, Math.min(1, factor));
+          const smoothFactor = factor * factor * (3 - 2 * factor);
+          const minScale = 0.85;
+          const maxScale = 1.0;
+          const scale = minScale + (maxScale - minScale) * smoothFactor;
+          gsap.set(card.ref, { scale });
+        });
+      };
+
+      updateCardScales(0);
+
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: pinContainer,
           start: "top top",
           end: `+=${maxYOffset}`,
           pin: true,
-          pinSpacing: true, // ← removes the big bottom gap completely
+          pinSpacing: true,
           scrub: 0.5,
           anticipatePin: 1,
           invalidateOnRefresh: true,
+          onUpdate: (self) => updateCardScales(self.progress),
         },
       });
 
-      scrollTrigger = animation.scrollTrigger || null;
-    };
+      tl.fromTo(cardsContainer, { y: startY }, { y: endY, ease: "none" });
+    });
 
-    setTimeout(initAnimation, 100);
+    // Mobile Animation
+    mm.add("(max-width: 767px)", () => {
+      const cards = [card1Ref.current, card2Ref.current, card3Ref.current];
 
-    const handleResize = () => {
-      if (scrollTrigger) scrollTrigger.kill();
-      ScrollTrigger.refresh();
-      setTimeout(initAnimation, 100);
-    };
+      cards.forEach((card) => {
+        if (!card) return;
 
-    window.addEventListener("resize", handleResize);
+        // Simple scaling based on individual card position in viewport
+        gsap.to(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top bottom", // enter viewport
+            end: "bottom top", // exit viewport
+            scrub: 0.5,
+            onUpdate: (self) => {
+              // Calculate scale: 1.0 at center, 0.85 at edges
+              // Progress 0 (entering) -> 0.5 (center) -> 1 (exiting)
+              // We want scale peak at 0.5
+              const p = self.progress;
+              // Map 0 -> 0, 0.5 -> 1, 1 -> 0
+              const normalized = 1 - Math.abs(p - 0.5) * 2;
+
+              const minScale = 0.85;
+              const maxScale = 1.0;
+              // Smooth it
+              const smooth = normalized * normalized * (3 - 2 * normalized);
+              const scale = minScale + (maxScale - minScale) * smooth;
+
+              gsap.set(card, { scale });
+            },
+          },
+        });
+      });
+    });
 
     return () => {
-      window.removeEventListener("resize", handleResize);
-      if (scrollTrigger) scrollTrigger.kill();
+      mm.revert();
     };
   }, []);
 
   return (
-    <div>
+    <div className="md:px-0 px-5">
       <Text
         as="h2"
         className="text-black w-full max-w-[1093px] mb-[15px] mt-[51px] md:text-[48px] md:leading-[60px] text-center mx-auto"
       >
         The Solution: The 24/7 Inside Sales Agent (ISA)
       </Text>
-      <Text className="text-black md:text-[22px] leading-[32px] w-full max-w-[1014px] mb-[145px] text-center mx-auto">
+      <Text className="text-black md:text-[22px] leading-[32px] w-full max-w-[1014px] mb-10 md:mb-[145px] text-center mx-auto">
         We don't sell generic "answering services." We engineer intelligent AI
         Agents that plug directly into your Follow Up Boss, kvCORE, or Lofty
         CRM.
       </Text>
 
-      <div
-        className="w-full relative"
-        style={{ height: "200vh" }}
-        ref={containerRef}
-      >
-        {/* Background Image */}
-        <Image
-          src={bgImage}
-          alt="background"
-          className="w-full h-full absolute inset-0 object-cover"
-          // style={{ zIndex: 0 }}
-        />
-        <div className="relative z-10 w-full" ref={pinContainerRef}>
-          <div className="hidden md:block absolute left-0 top-0 w-full max-w-[705px] z-20">
+      <div className="w-full relative" ref={containerRef}>
+        <div>
+          <div
+            className="relative z-10 w-full md:h-screen"
+            ref={pinContainerRef}
+          >
+            {/* Background Image */}
             <Image
-              src={solutionIcon}
-              alt="solutionIcon"
-              className="w-full max-w-[605px]"
+              src={bgImage}
+              alt="background"
+              className="w-full h-full absolute inset-0 object-cover -z-10"
             />
-          </div>
 
-          <div className="md:hidden w-full max-w-[705px] mx-auto mb-8">
-            <Image
-              src={solutionIcon}
-              alt="solutionIcon"
-              className="w-full max-w-[705px]"
-            />
-          </div>
+            <div className="hidden md:block absolute left-0 top-0 w-full max-w-[705px] z-20">
+              <Image
+                src={solutionIcon}
+                alt="solutionIcon"
+                className="w-full max-w-[605px]"
+              />
+            </div>
 
-          <div className="max-w-[1240px] mx-auto px-4 md:px-0">
-            <div className="relative flex md:flex-row flex-col items-center md:justify-end">
-              <div
-                ref={cardsContainerRef}
-                className="relative z-10 w-full md:w-auto md:max-w-[546px]"
-              >
-                {/* card 1 */}
+            {/* <div className="md:hidden w-full max-w-[705px] mx-auto mb-8">
+              <Image
+                src={solutionIcon}
+                alt="solutionIcon"
+                className="w-full max-w-[705px] "
+              />
+            </div> */}
+
+            <div className="max-w-[1240px] mx-auto px-4 md:px-0">
+              <div className="relative flex md:flex-row flex-col items-center md:justify-end">
                 <div
-                  ref={card1Ref}
-                  className="relative w-full md:max-w-[546px] mb-[15px] z-20"
+                  ref={cardsContainerRef}
+                  className="relative z-10 w-full md:w-auto md:max-w-[546px]"
                 >
-                  <Image
-                    src={cardbg}
-                    alt="cardbg"
-                    className="w-full absolute inset-0 min-h-[289px] z-20"
-                  />
-                  <div className="relative z-20 w-full px-8 min-h-[289px] flex flex-col justify-center">
-                    <div className="w-[67px] h-[43px] bg-[#E8BE45] rounded-[8px] mb-[20px]" />
-                    <Text className="text-black text-[24px] md:leading-[44px] font-semibold mb-2">
-                      Automated Showing Coordination
-                    </Text>
-                    <Text className="text-black text-[18px] font-normal">
-                      We don't sell generic "answering services." We engineer
-                      intelligent AI Agents that integrate with your CRM.
-                    </Text>
+                  {/* card 1 */}
+                  <div
+                    ref={card1Ref}
+                    className="relative w-full md:max-w-[546px] mb-[15px] z-20"
+                  >
+                    <Image
+                      src={cardbg}
+                      alt="cardbg"
+                      className="w-full absolute inset-0 min-h-[289px] z-20"
+                    />
+                    <div className="relative z-20 w-full px-8 min-h-[289px] flex flex-col justify-center">
+                      <div className="w-[67px] h-[43px] bg-[#E8BE45] rounded-[8px] mb-[20px]" />
+                      <Text className="text-black text-[24px] md:leading-[44px] font-semibold mb-2">
+                        Automated Showing Coordination
+                      </Text>
+                      <Text className="text-black text-[18px] font-normal">
+                        We {`don't`} sell generic "answering services." We
+                        engineer intelligent AI Agents that integrate with your
+                        CRM.
+                      </Text>
+                    </div>
                   </div>
-                </div>
 
-                {/* card 2 */}
-                <div
-                  ref={card2Ref}
-                  className="relative w-full md:max-w-[546px] mb-[15px] z-20!"
-                >
-                  <Image
-                    src={cardbg}
-                    alt="cardbg"
-                    className="w-full absolute inset-0 min-h-[405px] z-20"
-                  />
-                  <div className="relative z-10 w-full px-8 min-h-[405px] flex flex-col justify-center">
-                    <div className="w-[67px] h-[43px] bg-[#E8BE45] rounded-[8px] mb-[20px]" />
-                    <Text className="text-black text-[24px] md:leading-[44px] font-semibold mb-2">
-                      The "Renter Firewall" <br /> (Property Management)
-                    </Text>
-                    <Text className="text-black text-[18px] font-normal">
-                      Our AI handles all Tier-1 renter qualification for you.
-                    </Text>
-                    <ul className="list-disc pl-5 mt-3">
-                      <li className="text-black text-[18px] font-normal">
-                        "Do you accept Section 8?"
-                      </li>
-                      <li className="text-black text-[18px] font-normal">
-                        "What are the move-in fees?"
-                      </li>
-                      <li className="text-black text-[18px] font-normal">
-                        "Is it pet-friendly?"
-                      </li>
-                    </ul>
+                  {/* card 2 */}
+                  <div
+                    ref={card2Ref}
+                    className="relative w-full md:max-w-[546px] mb-[15px] z-20!"
+                  >
+                    <Image
+                      src={cardbg}
+                      alt="cardbg"
+                      className="w-full absolute inset-0 min-h-[405px] z-20"
+                    />
+                    <div className="relative z-10 w-full px-8 min-h-[405px] flex flex-col justify-center">
+                      <div className="w-[67px] h-[43px] bg-[#E8BE45] rounded-[8px] mb-[20px]" />
+                      <Text className="text-black text-[24px] md:leading-[44px] font-semibold mb-2">
+                        The "Renter Firewall" <br /> (Property Management)
+                      </Text>
+                      <Text className="text-black text-[18px] font-normal">
+                        Our AI handles all Tier-1 renter qualification for you.
+                      </Text>
+                      <ul className="list-disc pl-5 mt-3">
+                        <li className="text-black text-[18px] font-normal">
+                          "Do you accept Section 8?"
+                        </li>
+                        <li className="text-black text-[18px] font-normal">
+                          "What are the move-in fees?"
+                        </li>
+                        <li className="text-black text-[18px] font-normal">
+                          "Is it pet-friendly?"
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
 
-                {/* card 3 */}
-                <div
-                  ref={card3Ref}
-                  className="relative w-full md:max-w-[546px] mb-[15px]"
-                >
-                  <Image
-                    src={cardbg}
-                    alt="cardbg"
-                    className="w-full absolute inset-0 min-h-[397px] z-20"
-                  />
-                  <div className="relative z-10 w-full px-8 min-h-[397px] flex flex-col justify-center">
-                    <div className="w-[67px] h-[43px] bg-[#E8BE45] rounded-[8px] mb-[20px]" />
-                    <Text className="text-black text-[24px] md:leading-[44px] font-semibold mb-2">
-                      Instant Knowledge (MLS Sync)
-                    </Text>
-                    <Text className="text-black text-[18px] font-normal">
-                      AI that references live MLS data to answer callers
-                      instantly.
-                    </Text>
-                    <ul className="list-disc pl-5 mt-3">
-                      <li className="text-black text-[18px] font-normal">
-                        Caller: "How much is the house on Oak Street?"
-                      </li>
-                      <li className="text-black text-[18px] font-normal">
-                        AI: "It's listed at $650,000 and has a heated pool.
-                        Would you like to book a showing?"
-                      </li>
-                    </ul>
+                  {/* card 3 */}
+                  <div
+                    ref={card3Ref}
+                    className="relative w-full md:max-w-[546px] mb-[15px]"
+                  >
+                    <Image
+                      src={cardbg}
+                      alt="cardbg"
+                      className="w-full absolute inset-0 min-h-[397px] z-20"
+                    />
+                    <div className="relative z-10 w-full px-8 min-h-[397px] flex flex-col justify-center">
+                      <div className="w-[67px] h-[43px] bg-[#E8BE45] rounded-[8px] mb-[20px]" />
+                      <Text className="text-black text-[24px] md:leading-[44px] font-semibold mb-2">
+                        Instant Knowledge (MLS Sync)
+                      </Text>
+                      <Text className="text-black text-[18px] font-normal">
+                        AI that references live MLS data to answer callers
+                        instantly.
+                      </Text>
+                      <ul className="list-disc pl-5 mt-3">
+                        <li className="text-black text-[18px] font-normal">
+                          Caller: "How much is the house on Oak Street?"
+                        </li>
+                        <li className="text-black text-[18px] font-normal">
+                          AI: "It's listed at $650,000 and has a heated pool.
+                          Would you like to book a showing?"
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -25,15 +25,19 @@ const RealEstateHero = () => {
 
       {/* Border Image - positioned at bottom */}
       <div className="absolute bottom-0 left-0 w-full">
-        <Image src={border} alt="border" className="w-full" />
+        <Image
+          src={border}
+          alt="border"
+          className="w-full max-w-[1138px] mx-auto"
+        />
       </div>
 
       {/* Content */}
       <div className="relative max-w-[1240px] mx-auto px-5 py-20">
         <div className="flex flex-col items-center text-center ">
           {/* Rating Badge */}
-          <div className="flex items-center justify-center bg-white border border-[#E1E3E8] rounded-full w-[107px] h-[35px] mb-[12px]">
-            <Text className="text-[13px] font-medium leading-none text-primary">
+          <div className="flex items-center justify-center bg-white border border-[#E1E3E8] rounded-full w-[107px] h-[35px] mb-[12px] font-mona-sans shadow-lg">
+            <Text className="text-[13px] font-medium leading-none text-primary font-mona-sans">
               Real Estate
             </Text>
           </div>
