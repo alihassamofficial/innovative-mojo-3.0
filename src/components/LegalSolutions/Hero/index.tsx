@@ -7,6 +7,7 @@ import Text from "@/components/ui/Text";
 import heroBg from "@/public/images/real-estate/bg.png";
 import border from "@/public/images/real-estate/border.svg";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
 
 const RealEstateHero = () => {
   return (
@@ -59,12 +60,14 @@ const RealEstateHero = () => {
 
           {/* CTA Section */}
           <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-            <Button
-              className="w-full md:w-[286px] h-[49px] md:h-[61px] flex justify-center items-center mt-[30px] border border-[#FAC111D] shadow-[0px_5px_10px_0px_#00000026]
+            <Link href="/contact-us">
+              <Button
+                className="w-full md:w-[286px] h-[49px] md:h-[61px] flex justify-center items-center mt-[30px] border border-[#FAC111D] shadow-[0px_5px_10px_0px_#00000026]
 "
-            >
-              Audit My Intake Process
-            </Button>
+              >
+                Audit My Intake Process
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

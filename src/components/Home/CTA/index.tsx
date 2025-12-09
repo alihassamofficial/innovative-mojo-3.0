@@ -46,7 +46,7 @@ const CTA = () => {
 
         {/* CTA Button */}
         <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-          <Link href="/talk-to-mojo">
+          <Link href="/contact-us">
             <Button className="mx-auto shadow-[0px_5px_10px_0px_#00000026]  bg-[#E5BF5B] border flex items-center gap-[10px] border-[#FAC11D] text-black text-lg md:text-[20px] font-medium  px-8 py-4 rounded-[16px] font-mona-sans hover:bg-[#FAC11D] transition-colors w-[208px] h-[61px]">
               <PhoneSolidIcon />
               Talk To Mojo

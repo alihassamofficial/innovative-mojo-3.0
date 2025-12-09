@@ -6,6 +6,7 @@ import Text from "@/components/ui/Text";
 import { StaticImageData } from "next/image";
 
 import CardBorder from "@/public/images/home/core-capabilities/border.png";
+import { ShimmerDiv } from "@/components/ui/ShimmerDiv";
 
 interface CardProps {
   title: string;

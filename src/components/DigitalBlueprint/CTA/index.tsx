@@ -42,7 +42,7 @@ const DigitalBlueprintCTA = () => {
           {/* CTA Button */}
           <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
             {" "}
-            <Link href="/talk-to-mojo">
+            <Link href="/contact-us">
               <Button className="bg-secondary border border-[#FAC11D] flex items-center justify-center gap-3 text-black text-lg md:text-[20px] font-medium  px-8 py-4 rounded-[16px] font-mona-sans hover:bg-[#FAC11D] transition-colors w-[234px] h-[61px]">
                 <PhoneSolidIcon />
                 Click To Demo

@@ -60,7 +60,7 @@ const Footer = () => {
                   Home
                 </Text>
               </Link>
-              <Link href="/">
+              <Link href="/real-estate">
                 <Text
                   as="p"
                   className="text-[16px] leading-[28px] text-white font-normal"
@@ -68,7 +68,7 @@ const Footer = () => {
                   Real State
                 </Text>
               </Link>
-              <Link href="/">
+              <Link href="/legal-solutions">
                 <Text
                   as="p"
                   className="text-[16px] leading-[28px] text-white font-normal"
@@ -76,7 +76,7 @@ const Footer = () => {
                   Legal Solutions
                 </Text>
               </Link>
-              <Link href="/">
+              <Link href="/digital-blueprint">
                 <Text
                   as="p"
                   className="text-[16px] leading-[28px] text-white font-normal"
@@ -107,12 +107,12 @@ const Footer = () => {
                 <Text className="text-[16px] text-white leading-[28px]">
                   sales@innovativemojo.com
                 </Text>
-                <Link href="/">
+                <Link href="/contact-us">
                   <Text className="text-[16px] text-white leading-[28px]">
                     Schedule a meeting
                   </Text>
                 </Link>
-                <Link href="/">
+                <Link href="/contact-us">
                   <Text className="text-[16px] text-white leading-[28px]">
                     Contact
                   </Text>{" "}

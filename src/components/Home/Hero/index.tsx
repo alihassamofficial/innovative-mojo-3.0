@@ -92,7 +92,7 @@ const Hero = () => {
               data-aos-duration="1000"
               className="relative w-full mb-[9px]"
             >
-              <div className="flex items-center bg-[#E1E3E833]/20 border border-[#E5BF5B] md:h-[75px] md:max-w-[464px] rounded-full overflow-hidden">
+              <div className="flex items-center bg-white border border-[#E5BF5B] md:h-[75px] md:max-w-[464px] rounded-full overflow-hidden">
                 {/* Country Code Dropdown */}
                 <select
                   value={countryCode}

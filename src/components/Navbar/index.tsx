@@ -39,7 +39,10 @@ export default function Navbar() {
             </Text>
 
             {/* Book A Demo Button */}
-            <Link href="/" className="shrink-0 flex items-center gap-[6px]">
+            <Link
+              href="/contact-us"
+              className="shrink-0 flex items-center gap-[6px]"
+            >
               <Text className="text-[10px] md:text-[13px] md:leading-[100%]  font-medium font-mona-sans">
                 Book A Demo
               </Text>

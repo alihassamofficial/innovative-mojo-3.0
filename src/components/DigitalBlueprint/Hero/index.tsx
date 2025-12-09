@@ -7,6 +7,7 @@ import Text from "@/components/ui/Text";
 import heroBg from "@/public/images/real-estate/bg.png";
 import border from "@/public/images/real-estate/border.svg";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
 
 const DigitalBlueprintHero = () => {
   return (
@@ -62,12 +63,14 @@ const DigitalBlueprintHero = () => {
           {/* CTA Section */}
 
           <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-            <Button
-              className="w-full md:w-[262px] md:h-[61px] h-[49px] flex justify-center items-center mt-[30px] border border-[#FAC11D] shadow-[0px_5px_10px_0px_#00000026]
+            <Link href="/contact-us">
+              <Button
+                className="w-full md:w-[262px] md:h-[61px] h-[49px] flex justify-center items-center mt-[30px] border border-[#FAC11D] shadow-[0px_5px_10px_0px_#00000026]
 "
-            >
-              Start Your Build
-            </Button>
+              >
+                Start Your Build
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

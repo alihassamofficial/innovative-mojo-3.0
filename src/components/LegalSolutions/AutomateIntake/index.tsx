@@ -31,7 +31,7 @@ const AutomateIntake = () => {
 
           {/* CTA Button */}
           <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-            <Link href="/talk-to-mojo">
+            <Link href="/contact-us">
               <Button className="bg-secondary border mt-[22px] border-[#FAC11D] text-black text-[16px] leading-[22px] md:text-[20px] font-semibold  px-8 py-4 rounded-[16px] font-mona-sans hover:bg-[#FAC11D] transition-colors w-full h-[49px] md:w-[366px] md:h-[60px]">
                 Hear A Live Legal Demo
               </Button>
