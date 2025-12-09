@@ -19,7 +19,7 @@ const LeftSlide = () => {
         "ready to ship"
     ];
 
-    const description = "Start building voice agents in minutes. No complex setups. Just real results from day one.";
+    const description = "Deploy an infinite workforce that never calls in sick. Automate your intake process and let your team focus on closing deals.";
 
     // Auto-change text animation every 5 seconds
     useEffect(() => {
@@ -61,16 +61,16 @@ const LeftSlide = () => {
     };
 
     return (
-        <div className='max-w-[505px] relative md:min-h-[682px] min-h-[400px]  flex flex-col items-center justify-center'>
-            <Image className='object-cover absolute  z-0 md:p-1 px-5' src={leftSlideBg} alt="leftSlideBg" />
+        <div className='max-w-[505px] w-full relative h-full md:min-h-[650px] min-h-[500px] md:px-0 px-5 overflow-hidden flex flex-col items-center justify-center'>
+            <Image className='absolute inset-0 w-full max-w-[525px] h-full z-0 md:p-1 px-5' src={leftSlideBg} alt="leftSlideBg" />
 
-            <div className='relative z-10 flex flex-col pl-12  w-full  '>
+            <div className='relative z-10 flex flex-col  '>
                 
                 {/* Content */}
-                <div className='w-full max-w-[379px] pr-8'>
+                <div className='w-full  md:max-w-[379px] max-w-[300px] pr-8'>
                     <div className='text-left'>
                         <h2 className='text-white text-2xl md:text-[40px] font-normal font-mona-sans mb-2 leading-tight'>
-                            Join thousands building agents{' '}
+                            {/* Join thousands building agents{' '}
                             <span 
                                 className={`inline-block transition-all duration-500 ease-in-out ${
                                     isAnimating 
@@ -79,7 +79,8 @@ const LeftSlide = () => {
                                 }`}
                             >
                                 <span className='font-bold'>{animatedTexts[activeIndex]}</span>
-                            </span>
+                            </span> */}
+                            Scale Your Support, Not Your Payroll.
                         </h2>
                         <p className='text-white text-[14px] md:text-[18px]  font-normal font-mona-sans'>
                             {description}
@@ -87,7 +88,7 @@ const LeftSlide = () => {
                     </div>
 
                     {/* Animated Bullets */}
-                    <style dangerouslySetInnerHTML={{
+                    {/* <style dangerouslySetInnerHTML={{
                         __html: `
                             @keyframes bulletGroupFloat {
                                 0%, 100% {
@@ -126,7 +127,7 @@ const LeftSlide = () => {
                                 className={`rounded-full transition-all duration-700 ease-in-out bullet-item ${getBulletStyles(position)}`}
                             />
                         ))}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
