@@ -10,11 +10,7 @@ const Revnue = () => {
         <Image src={bg} alt="bg" height={644} width={1240} />
       </div>
       <div className="flex flex-wrap md:flex-row justify-between gap-5 mt-8 md:mt-12">
-        <div
-          data-aos="fade-right"
-          data-aos-delay="200"
-          data-aos-duration="1000"
-        >
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
           <Text className="md:text-[48px] text-[24px] md:leading-[60px] font-bold font-mona-sans max-w-[600px]">
             <span className="font-normal">The</span> &quot;Revenue
             Protection&quot;
@@ -22,7 +18,7 @@ const Revnue = () => {
           </Text>
         </div>
         <ul
-          data-aos="fade-left"
+          data-aos="fade-up"
           data-aos-delay="300"
           data-aos-duration="1000"
           className="list-disc pl-5 text-black flex flex-col gap-2  max-w-[520px]  font-mona-sans md:text-[18px] text-[16px] md:leading-[24px] leading-[22px] m-0 "

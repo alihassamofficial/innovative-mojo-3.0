@@ -108,61 +108,63 @@ export default function Navbar() {
       </header>
 
       {/* Mobile Navigation */}
-      <header className=" flex w-full items-center justify-between px-5 py-[24px]  lg:hidden">
-        <Link href="/">
-          <Image
-            src="/navbar/mojo-logo.png"
-            alt="Innovative Mojo"
-            width={78}
-            height={61}
-            className="h-[61px] w-[78px]"
-            priority
-          />
-        </Link>
+      <header className="shadow-[0px_12px_15px_0px_#00000024] z-10">
+        <div className="flex w-full items-center justify-between px-5 py-[24px]  lg:hidden">
+          <Link href="/">
+            <Image
+              src={logo}
+              alt="Innovative Mojo"
+              width={78}
+              height={61}
+              className="h-[61px] w-[78px]"
+              priority
+            />
+          </Link>
 
-        {/* Drawer Trigger Button */}
-        <WebDrawer>
-          <nav className="flex flex-col h-full">
-            {/* Navigation Links */}
-            <div className="flex flex-col flex-1">
-              {navLinks.map(({ label, href }, index) => {
-                const isActive =
-                  pathname === href ||
-                  (href !== "/" && pathname?.startsWith(href));
+          {/* Drawer Trigger Button */}
+          <WebDrawer>
+            <nav className="flex flex-col h-full">
+              {/* Navigation Links */}
+              <div className="flex flex-col flex-1">
+                {navLinks.map(({ label, href }, index) => {
+                  const isActive =
+                    pathname === href ||
+                    (href !== "/" && pathname?.startsWith(href));
 
-                return (
-                  <div key={label}>
-                    <Link
-                      href={href}
-                      className={`block py-5 text-center text-black text-[16px] leading-[28px] font-normal  transition-colors duration-200 ${
-                        isActive ? "font-semibold" : ""
-                      }`}
-                    >
-                      {label}
-                    </Link>
+                  return (
+                    <div key={label}>
+                      <a
+                        href={href}
+                        className={`block py-5 text-center text-black text-[16px] leading-[28px] font-normal  transition-colors duration-200 ${
+                          isActive ? "font-semibold" : ""
+                        }`}
+                      >
+                        {label}
+                      </a>
 
-                    <div
-                      className="h-[2px] w-full"
-                      style={{
-                        backgroundImage: `url(${border.src})`,
-                        backgroundSize: "100% 100%",
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "center",
-                      }}
-                    />
-                  </div>
-                );
-              })}
-              {/* CTA Button */}
-              <Link href="/contact-us" className="block mt-[27px]">
-                <Button className=" w-[190px] mx-auto rounded-[10px] h-[50px] flex items-center justify-center gap-[7px] text-black text-[15px] leading-[28px] font-medium font-mona-sans shadow-[0px_5px_10px_0px_#00000026] transition-opacity duration-200 hover:opacity-90">
-                  <PhoneSolidIcon />
-                  Call The AI Now
-                </Button>
-              </Link>
-            </div>
-          </nav>
-        </WebDrawer>
+                      <div
+                        className="h-[2px] w-full"
+                        style={{
+                          backgroundImage: `url(${border.src})`,
+                          backgroundSize: "100% 100%",
+                          backgroundRepeat: "no-repeat",
+                          backgroundPosition: "center",
+                        }}
+                      />
+                    </div>
+                  );
+                })}
+                {/* CTA Button */}
+                <Link href="/contact-us" className="block mt-[27px]">
+                  <Button className=" w-[190px] mx-auto rounded-[10px] h-[50px] flex items-center justify-center gap-[7px] text-black text-[15px] leading-[28px] font-medium font-mona-sans shadow-[0px_5px_10px_0px_#00000026] transition-opacity duration-200 hover:opacity-90">
+                    <PhoneSolidIcon />
+                    Call The AI Now
+                  </Button>
+                </Link>
+              </div>
+            </nav>
+          </WebDrawer>
+        </div>
       </header>
     </>
   );

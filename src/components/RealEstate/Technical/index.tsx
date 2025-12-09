@@ -38,7 +38,7 @@ const Technical = () => {
             {/* Left Box - Automated CRM Write-Back */}
             <div
               className=" rounded-lg border border-[#FFFFFF] w-full md:max-w-[351px] max-w-full px-[37px] py-10"
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-delay="300"
               data-aos-duration="1000"
             >
@@ -58,7 +58,7 @@ const Technical = () => {
             {/* Right Box - Automated Lead Nurturing */}
             <div
               className="rounded-lg border border-[#FFFFFF] w-full md:max-w-[351px] max-w-full px-[37px] py-10"
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-delay="400"
               data-aos-duration="1000"
             >

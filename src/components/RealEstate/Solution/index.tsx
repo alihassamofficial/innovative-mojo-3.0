@@ -10,6 +10,11 @@ import Text from "@/components/ui/Text";
 import bgImage from "@/public/images/real-estate/solution-bg.png";
 import solutionIcon from "@/public/images/real-estate/solution-right.png";
 import cardbg from "@/public/images/real-estate/cardbg.png";
+import {
+  InstanKnowledgeIcon,
+  PhoneCallIcon,
+  UserGroupIcon,
+} from "@/components/ui/Icons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -196,15 +201,17 @@ const Solution = () => {
                   {/* card 1 */}
                   <div
                     ref={card1Ref}
-                    className="relative w-full md:max-w-[546px] mb-[15px] z-20"
+                    className="relative w-full md:max-w-[546px] mb-[15px] z-20! bg-[#F1F4F9]"
                   >
                     <Image
                       src={cardbg}
                       alt="cardbg"
                       className="w-full absolute inset-0 min-h-[289px] z-20"
                     />
-                    <div className="relative z-20 w-full px-8 min-h-[289px] flex flex-col justify-center">
-                      <div className="w-[67px] h-[43px] bg-[#E8BE45] rounded-[8px] mb-[20px]" />
+                    <div className="relative z-30 w-full px-8 min-h-[289px] flex flex-col justify-center">
+                      <div className="w-[73px] h-[52px] bg-[#E8BE45] rounded-[8px] mb-[20px] flex items-center justify-center">
+                        <UserGroupIcon />
+                      </div>
                       <Text className="text-black text-[24px] md:leading-[44px] font-semibold mb-2">
                         Automated Showing Coordination
                       </Text>
@@ -219,15 +226,17 @@ const Solution = () => {
                   {/* card 2 */}
                   <div
                     ref={card2Ref}
-                    className="relative w-full md:max-w-[546px] mb-[15px] z-20!"
+                    className="relative w-full md:max-w-[546px] mb-[15px] z-20! bg-[#F1F4F9]"
                   >
                     <Image
                       src={cardbg}
                       alt="cardbg"
                       className="w-full absolute inset-0 min-h-[405px] z-20"
                     />
-                    <div className="relative z-10 w-full px-8 min-h-[405px] flex flex-col justify-center">
-                      <div className="w-[67px] h-[43px] bg-[#E8BE45] rounded-[8px] mb-[20px]" />
+                    <div className="relative z-30 w-full px-8 min-h-[405px] flex flex-col justify-center">
+                      <div className="w-[73px] h-[52px] bg-[#E8BE45] rounded-[8px] mb-[20px] flex items-center justify-center">
+                        <PhoneCallIcon />
+                      </div>
                       <Text className="text-black text-[24px] md:leading-[44px] font-semibold mb-2">
                         The &quot;Renter Firewall&quot; <br /> (Property
                         Management)
@@ -252,15 +261,17 @@ const Solution = () => {
                   {/* card 3 */}
                   <div
                     ref={card3Ref}
-                    className="relative w-full md:max-w-[546px] mb-[15px]"
+                    className="relative w-full md:max-w-[546px] mb-[15px] bg-[#F1F4F9]"
                   >
                     <Image
                       src={cardbg}
                       alt="cardbg"
                       className="w-full absolute inset-0 min-h-[397px] z-20"
                     />
-                    <div className="relative z-10 w-full px-8 min-h-[397px] flex flex-col justify-center">
-                      <div className="w-[67px] h-[43px] bg-[#E8BE45] rounded-[8px] mb-[20px]" />
+                    <div className="relative z-30 w-full px-8 min-h-[397px] flex flex-col justify-center">
+                      <div className="w-[73px] h-[52px] bg-[#E8BE45] rounded-[8px] mb-[20px] flex items-center justify-center">
+                        <InstanKnowledgeIcon />
+                      </div>
                       <Text className="text-black text-[24px] md:leading-[44px] font-semibold mb-2">
                         Instant Knowledge (MLS Sync)
                       </Text>
