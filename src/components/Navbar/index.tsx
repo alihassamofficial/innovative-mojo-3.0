@@ -80,7 +80,7 @@ export default function Navbar() {
                   >
                     {label}
                     <span
-                      className={`absolute bottom-[-4px] left-0 right-0 h-[1px] transition-opacity duration-200 ${
+                      className={`absolute bottom-[-4px] left-0 right-0 h-px transition-opacity duration-200 ${
                         isActive
                           ? "opacity-100"
                           : "opacity-0 group-hover:opacity-100"
@@ -93,7 +93,7 @@ export default function Navbar() {
             </nav>
 
             {/* CTA Button */}
-            <Link href="/call-ai" className="shrink-0">
+            <Link href="/contact-us" className="shrink-0">
               <Button className="bg-[#E5BF5B] border flex gap-x-[7px] items-center justify-center border-[#FAC11D] text-black  md:text-[15px]  leading-[28px] l rounded-[10px] font-medium w-[190px] h-[45px] font-mona-sans shadow-[0px_5px_10px_0px_#00000026]">
                 <PhoneSolidIcon />
                 Call The AI Now
@@ -124,7 +124,7 @@ export default function Navbar() {
                 {label}
               </Link>
             ))}
-            <Link href="/call-ai" className="mt-2">
+            <Link href="/contact-us" className="mt-2">
               <Button className="bg-secondary text-black w-full">
                 Call The AI Now
               </Button>
