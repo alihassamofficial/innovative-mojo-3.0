@@ -19,7 +19,7 @@ export default function Navbar() {
     { label: "Real EState", href: "/real-estate" },
     { label: "Legal Solutions", href: "/legal-solutions" },
     { label: "Digital Blueprint", href: "/digital-blueprint" },
-    { label: "Contact", href: "/contact" },
+    { label: "Contact", href: "/contact-us" },
   ];
 
   return (
