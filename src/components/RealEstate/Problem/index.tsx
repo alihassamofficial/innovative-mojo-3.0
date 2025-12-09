@@ -238,28 +238,24 @@ const Problem = () => {
             </div>
           </RoundedPolygon>
 
-          {/* mobile view text div */}
+          {/* mobile view image */}
+          <div className="relative md:hidden block w-full max-h-[398px] mb-[30px]">
+            <Image
+              src={problemIcon}
+              alt="problemIcon"
+              className="w-full max-h-[398px] object-cover rounded-[22px]"
+            />
+          </div>
 
-          <RoundedPolygon
-            points={currentMobileTopPoints}
-            borderColor="#00000033"
-            borderWidth={1}
-            radius={22}
-            // fixedWidth={leftWidth}
-            fixedHeight={MOBILE_CONTAINER_HEIGHT}
-            className="relative md:hidden block min-h-[665px]"
-          >
-            {/* We explicitly set width on the wrapper div to drive layout */}
-            <div
-              style={{ maxWidth: `${leftWidth}px`, height: "100%" }}
-              className="relative"
-            >
+          {/* mobile view text div */}
+          <div className="relative md:hidden block mb-[100px]">
+            <div className="relative rounded-[22px] pb-8 border border-black/20 ">
               <Image
                 src={problemBg}
                 alt="problemBg"
-                className="w-full absolute inset-0 h-[425px] object-bottom md:object-center md:object-cover"
+                className="w-full absolute bottom-0 "
               />
-              <div className="relative w-full z-10 pl-[32px] pr-[72px] flex flex-col justify-center items-center min-h-[425px] pt-10 md:pt-0">
+              <div className=" relative w-full z-10 px-5 md:pl-[32px] md:pr-[72px] flex flex-col md:justify-center md:items-center  pt-10 md:pt-0">
                 <Text className="text-[#050000] text-[20px] leading-[32px] font-normal mb-[50px]">
                   You are in the middle of a walkthrough with a high-value
                   client. Your phone buzzes. It&apos;s a new lead calling from a
@@ -278,27 +274,7 @@ const Problem = () => {
                 </ul>
               </div>
             </div>
-          </RoundedPolygon>
-
-          {/* mobile view image */}
-          <RoundedPolygon
-            points={currentMobileBottomPoints}
-            radius={22}
-            // fixedWidth={rightWidth}
-            // fixedHeight={CONTAINER_HEIGHT}
-            className="md:hidden block relative bottom-[136px]"
-          >
-            <div
-              // style={{ width: `${rightWidth}px`, height: "100%" }}
-              className="relative"
-            >
-              <Image
-                src={problemIcon}
-                alt="problemIcon"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </RoundedPolygon>
+          </div>
         </div>
       </div>
 

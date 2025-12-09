@@ -23,21 +23,21 @@ const CTA = () => {
           <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
             <Text
               as="h2"
-              className="text-white text-[30px] md:text-[48px] md:leading-[60px]  font-bold font-mona-sans "
+              className="text-white text-[30px] md:text-[48px] md:leading-[60px] mb-6 md:mb-[42px] font-bold font-mona-sans "
             >
-              Interactive Demo (The &quot;Boom Call&quot;)
+              Don&apos;t Believe the Hype?
             </Text>
 
             {/* Subtitle */}
 
-            <Text className="text-white text-[20px] md:text-[32px] md:leading-[44px] font-normal font-mona-sans mb-6 md:mb-[42px]">
+            {/* <Text className="text-white text-[20px] md:text-[32px] md:leading-[44px] font-normal font-mona-sans mb-6 md:mb-[42px]">
               Don&apos;t Believe the Hype?
-            </Text>
+            </Text> */}
           </div>
           {/* Call to Action Text */}
           <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             <Text className="text-white text-[20px] md:text-[32px] md:leading-[44px] font-normal font-mona-sans mb-8 md:mb-[59px] ">
-              Talk to <span className="font-bold">&quot;Mojo&quot;</span> right
+              Talk to <span className="font-bold">&quot;MOJO&quot;</span> right
               now. No forms. No waiting. Just tap the <br /> button and try to
               stump our AI.
             </Text>
@@ -49,7 +49,7 @@ const CTA = () => {
           <Link href="/contact-us">
             <Button className="mx-auto shadow-[0px_5px_10px_0px_#00000026]  bg-[#E5BF5B] border flex items-center gap-[10px] border-[#FAC11D] text-black text-lg md:text-[20px] font-medium  px-8 py-4 rounded-[16px] font-mona-sans hover:bg-[#FAC11D] transition-colors w-[208px] h-[61px]">
               <PhoneSolidIcon />
-              Talk To Mojo
+              Talk To MOJO
             </Button>
           </Link>
         </div>

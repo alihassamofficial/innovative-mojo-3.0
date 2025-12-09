@@ -92,12 +92,12 @@ const Hero = () => {
               data-aos-duration="1000"
               className="relative w-full mb-[9px]"
             >
-              <div className="flex items-center bg-white border border-[#E5BF5B] md:h-[75px] md:max-w-[464px] rounded-full overflow-hidden">
+              <div className="flex items-center bg-white border border-[#E5BF5B] h-[50px] md:h-[75px] w-full md:max-w-[464px] mx-auto rounded-full overflow-hidden">
                 {/* Country Code Dropdown */}
                 <select
                   value={countryCode}
                   onChange={(e) => setCountryCode(e.target.value)}
-                  className="px-4 py-4 bg-transparent text-black font-medium border-r border-[#CFA846]/30 focus:outline-none appearance-none cursor-pointer"
+                  className="px-3 md:px-4 py-2 md:py-4 bg-transparent text-black font-medium border-r border-[#CFA846]/30 focus:outline-none appearance-none cursor-pointer shrink-0 text-sm md:text-base"
                 >
                   <option value="+1">+1</option>
                   <option value="+44">+44</option>
@@ -111,13 +111,13 @@ const Hero = () => {
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value)}
                   placeholder="000-000-000"
-                  className="flex-1 px-4 py-4 bg-transparent text-black placeholder:text-black/40 focus:outline-none"
+                  className="flex-1 min-w-0 px-2 md:px-4 py-2 md:py-4 bg-transparent text-black placeholder:text-black/40 focus:outline-none text-sm md:text-base"
                 />
 
                 {/* Call Button */}
                 <button
                   onClick={handleCall}
-                  className="md:w-14 md:h-14 w-10 h-10 bg-secondary cursor-pointer rounded-full flex items-center justify-center transition-colors duration-200  m-1 shrink-0"
+                  className="w-10 h-10 md:w-14 md:h-14 bg-secondary cursor-pointer rounded-full flex items-center justify-center transition-colors duration-200 m-1 md:m-1 shrink-0"
                   aria-label="Call voice agent"
                 >
                   <PhoneIcon />
@@ -132,7 +132,7 @@ const Hero = () => {
               data-aos-duration="1000"
             >
               <Text className="text-[18px] leading-[100%] font-normal font-mona-sans">
-                Available 24/7 • No spam, ever
+                Available 24/7
               </Text>
             </div>
           </div>

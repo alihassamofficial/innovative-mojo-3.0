@@ -27,7 +27,7 @@ export default function Navbar() {
     <>
       {/* Top Bar Banner */}
       <div
-        className="w-full "
+        className="w-full hidden md:block "
         style={{
           background: "linear-gradient(90deg, #E4C167 0%, #E8BE45 100%)",
         }}

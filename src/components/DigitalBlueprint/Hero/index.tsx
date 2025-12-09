@@ -62,7 +62,7 @@ const DigitalBlueprintHero = () => {
 
           {/* CTA Section */}
 
-          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+          {/* <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
             <Link href="/contact-us">
               <Button
                 className="w-full md:w-[262px] md:h-[61px] h-[49px] flex justify-center items-center mt-[30px] border border-[#FAC11D] shadow-[0px_5px_10px_0px_#00000026]
@@ -71,7 +71,7 @@ const DigitalBlueprintHero = () => {
                 Start Your Build
               </Button>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

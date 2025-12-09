@@ -1,13 +1,13 @@
-import CTA from '@/components/ContactUs/CTA'
-import Hero from '@/components/ContactUs/Hero'
+import CTA from "@/components/ContactUs/CTA";
+import Hero from "@/components/ContactUs/Hero";
 
 const ContactPage = () => {
   return (
     <div>
-        <Hero/>
-        <CTA/>
+      <Hero />
+      {/* <CTA/> */}
     </div>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;

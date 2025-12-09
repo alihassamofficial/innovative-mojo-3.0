@@ -192,7 +192,7 @@ const Solution = () => {
               />
             </div> */}
 
-            <div className="max-w-[1240px] mx-auto px-4 md:px-0">
+            <div className="max-w-[1240px] mx-auto  md:px-0">
               <div className="relative flex md:flex-row flex-col items-center md:justify-end">
                 <div
                   ref={cardsContainerRef}
@@ -201,14 +201,15 @@ const Solution = () => {
                   {/* card 1 */}
                   <div
                     ref={card1Ref}
-                    className="relative w-full md:max-w-[546px] mb-[15px] z-20! bg-[#F1F4F9]"
+                    className="relative w-full max-h-[357px] py-5 md:py-0 rounded-[22px] md:max-h-auto md:max-w-[546px] mb-[15px] z-20! bg-[#F1F4F9]"
                   >
                     <Image
                       src={cardbg}
                       alt="cardbg"
-                      className="w-full absolute inset-0 min-h-[289px] z-20"
+                      className="w-full absolute inset-0 min-h-[289px] z-20 rounded-[22px]"
+                      fill
                     />
-                    <div className="relative z-30 w-full px-8 min-h-[289px] flex flex-col justify-center">
+                    <div className="relative z-30 w-full md:px-8 px-5 min-h-[289px] flex flex-col justify-center">
                       <div className="w-[73px] h-[52px] bg-[#E8BE45] rounded-[8px] mb-[20px] flex items-center justify-center">
                         <UserGroupIcon />
                       </div>
@@ -226,14 +227,16 @@ const Solution = () => {
                   {/* card 2 */}
                   <div
                     ref={card2Ref}
-                    className="relative w-full md:max-w-[546px] mb-[15px] z-20! bg-[#F1F4F9]"
+                    className="relative w-full py-5 md:py-0 rounded-[22px] md:max-h-auto md:max-w-[546px] mb-[15px] z-20! bg-[#F1F4F9]"
                   >
                     <Image
                       src={cardbg}
                       alt="cardbg"
-                      className="w-full absolute inset-0 min-h-[405px] z-20"
+                      fill
+                      className="w-full absolute inset-0 min-h-[405px] z-20 rounded-[22px]"
                     />
-                    <div className="relative z-30 w-full px-8 min-h-[405px] flex flex-col justify-center">
+
+                    <div className="relative z-30 w-full md:px-8 px-5 min-h-[405px] flex flex-col justify-center">
                       <div className="w-[73px] h-[52px] bg-[#E8BE45] rounded-[8px] mb-[20px] flex items-center justify-center">
                         <PhoneCallIcon />
                       </div>
@@ -261,14 +264,15 @@ const Solution = () => {
                   {/* card 3 */}
                   <div
                     ref={card3Ref}
-                    className="relative w-full md:max-w-[546px] mb-[15px] bg-[#F1F4F9]"
+                    className="relative w-full py-5 md:py-0 rounded-[22px] md:max-h-auto md:max-w-[546px] mb-[15px] z-20! bg-[#F1F4F9]"
                   >
                     <Image
                       src={cardbg}
                       alt="cardbg"
-                      className="w-full absolute inset-0 min-h-[397px] z-20"
+                      fill
+                      className="w-full absolute inset-0 min-h-[397px] z-20 rounded-[22px]"
                     />
-                    <div className="relative z-30 w-full px-8 min-h-[397px] flex flex-col justify-center">
+                    <div className="relative z-30 w-full md:px-8 px-5 min-h-[397px] flex flex-col justify-center">
                       <div className="w-[73px] h-[52px] bg-[#E8BE45] rounded-[8px] mb-[20px] flex items-center justify-center">
                         <InstanKnowledgeIcon />
                       </div>

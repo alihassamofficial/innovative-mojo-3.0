@@ -242,29 +242,25 @@ const LegalSolutionsProblem = () => {
             </div>
           </RoundedPolygon>
 
-          {/* mobile view text div */}
+          {/* mobile view image */}
+          <div className="relative md:hidden block w-full max-h-[398px] mb-[30px]">
+            <Image
+              src={problemIcon}
+              alt="problemIcon"
+              className="w-full max-h-[398px] object-cover rounded-[22px]"
+            />
+          </div>
 
-          <RoundedPolygon
-            points={currentMobileTopPoints}
-            borderColor="#00000033"
-            borderWidth={1}
-            radius={22}
-            // fixedWidth={leftWidth}
-            fixedHeight={MOBILE_TEXT_CONTAINER_HEIGHT}
-            className="relative md:hidden block min-h-[750px]"
-          >
-            {/* We explicitly set width on the wrapper div to drive layout */}
-            <div
-              style={{ maxWidth: `${leftWidth}px`, height: "100%" }}
-              className="relative"
-            >
+          {/* mobile view text div */}
+          <div className="relative md:hidden block mb-[100px]">
+            <div className="relative rounded-[22px] pb-8 border border-black/20 ">
               <Image
                 src={problemBg}
                 alt="problemBg"
-                className="w-full absolute inset-0 h-[750px] object-bottom md:object-center md:object-cover"
+                className="w-full absolute bottom-0 "
               />
-              <div className="relative w-full z-10 px-5 md:pl-[32px] md:pr-[72px] flex flex-col md:justify-center md:items-center min-h-[750px] pt-10 md:pt-0">
-                <Text className="text-[#050000] text-[18px] leading-[28px] font-normal mb-[50px]">
+              <div className=" relative w-full z-10 px-5 md:pl-[32px] md:pr-[72px] flex flex-col md:justify-center md:items-center  pt-10 md:pt-0">
+                <Text className="text-[#050000] text-[18px] leading-[28px] font-normal mb-[30px]">
                   Most growing law firms struggle with the same bottleneck:
                   <span className="font-bold"> Intake.</span>
                 </Text>
@@ -286,27 +282,7 @@ const LegalSolutionsProblem = () => {
                 </ul>
               </div>
             </div>
-          </RoundedPolygon>
-
-          {/* mobile view image */}
-          <RoundedPolygon
-            points={currentMobileBottomPoints}
-            radius={22}
-            // fixedWidth={rightWidth}
-            // fixedHeight={CONTAINER_HEIGHT}
-            className="md:hidden block relative bottom-[136px]"
-          >
-            <div
-              // style={{ width: `${rightWidth}px`, height: "100%" }}
-              className="relative"
-            >
-              <Image
-                src={problemIcon}
-                alt="problemIcon"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </RoundedPolygon>
+          </div>
         </div>
       </div>
     </>
