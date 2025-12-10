@@ -4,7 +4,11 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 import Text from "@/components/ui/Text";
-import { CloseIcon } from "@/components/ui/Icons";
+import {
+  CloseIcon,
+  BulletsIcon,
+  BulletsBlackIcon,
+} from "@/components/ui/Icons";
 
 import modalBg from "@/public/images/digital-bp/modal-bg.png";
 
@@ -141,7 +145,7 @@ const PhaseModal: React.FC<PhaseModalProps> = ({
 
           {/* Bullet Points */}
           {bulletPoints && bulletPoints.length > 0 && (
-            <ul className="pl-4 lg:pl-[19px]">
+            <ul className="pl-3 ">
               {bulletPoints.map((point, index) => {
                 // Split the point at the colon to separate heading from content
                 const colonIndex = point.indexOf(":");
@@ -155,19 +159,25 @@ const PhaseModal: React.FC<PhaseModalProps> = ({
                   : point;
 
                 return (
-                  <li key={index} className="list-disc ">
-                    <Text className="text-[14px] leading-[22px] md:text-[17px] md:leading-[26px]">
-                      {hasHeading ? (
-                        <>
-                          <span className="font-bold">{heading}</span>
-                          {content && (
-                            <span className="font-normal"> {content}</span>
-                          )}
-                        </>
-                      ) : (
-                        point
-                      )}
-                    </Text>
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="shrink-0 mt-1">
+                      <BulletsBlackIcon />
+                    </div>
+
+                    <div>
+                      <Text className="text-[14px] leading-[22px] md:text-[17px] md:leading-[26px]">
+                        {hasHeading ? (
+                          <>
+                            <span className="font-bold">{heading}</span>
+                            {content && (
+                              <span className="font-normal"> {content}</span>
+                            )}
+                          </>
+                        ) : (
+                          point
+                        )}
+                      </Text>
+                    </div>
                   </li>
                 );
               })}

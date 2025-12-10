@@ -8,6 +8,27 @@ import RoundedPolygon from "./RoundedPolygon";
 
 import problemBg from "@/public/images/real-estate/problembg.png";
 import problemIcon from "@/public/images/home/implementation/problem.png";
+import { BulletsIcon } from "@/components/ui/Icons";
+
+// Checkmark Icon Component
+const CheckmarkIcon = ({ className }: { className?: string }) => (
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M16.6667 5L7.50004 14.1667L3.33337 10"
+      stroke="#E8BE45"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 // Points configuration
 const RECT_POINTS = [
@@ -226,20 +247,36 @@ const HomeProblem = () => {
                   act as the &quot;Intelligence Layer&quot; on top of what you
                   already have.
                 </Text>
-                <ul className="list-disc pl-5">
-                  <li className="text-[#050000] text-[20px] leading-[32px] ">
-                    <span className="font-bold">Web Integration:</span> We embed
-                    AI widgets into your site to turn clicks into conversations.
+                <ul className="pl-0 space-y-4">
+                  <li className="text-[#050000] text-[20px] leading-[32px] flex items-start gap-3">
+                    <div className=" shrink-0 mt-2">
+                      <BulletsIcon />
+                    </div>
+                    <div>
+                      <span className="font-bold">Web Integration:</span> We
+                      embed AI widgets into your site to turn clicks into
+                      conversations.
+                    </div>
                   </li>
 
-                  <li className="text-[#050000] text-[20px] leading-[32px] ">
-                    <span className="font-bold">CRM Sync:</span> We map the AIfs
-                    data directly to your database fields.
+                  <li className="text-[#050000] text-[20px] leading-[32px] flex items-start gap-3">
+                    <div className=" shrink-0 mt-2">
+                      <BulletsIcon />
+                    </div>
+                    <div>
+                      <span className="font-bold">CRM Sync:</span> We map the
+                      AIfs data directly to your database fields.
+                    </div>
                   </li>
-                  <li className="text-[#050000] text-[20px] leading-[32px] ">
-                    <span className="font-bold">Dashboard Access:</span> You get
-                    a crystal-clear dashboard to listen to call recordings and
-                    track ROI in real-time.
+                  <li className="text-[#050000] text-[20px] leading-[32px] flex items-start gap-3">
+                    <div className=" shrink-0 mt-2">
+                      <BulletsIcon />
+                    </div>
+                    <div>
+                      <span className="font-bold">Dashboard Access:</span> You
+                      get a crystal-clear dashboard to listen to call recordings
+                      and track ROI in real-time.
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -290,19 +327,35 @@ const HomeProblem = () => {
                   act as the &quot;Intelligence Layer&quot; on top of what you
                   already have.
                 </Text>
-                <ul className="list-disc pl-5">
-                  <li className="text-[#050000] text-[18px] leading-[28px] ">
-                    <span className="font-bold">Web Integration:</span> We embed
-                    AI widgets into your site to turn clicks into conversations.
+                <ul className="pl-0 space-y-4">
+                  <li className="text-[#050000] text-[18px] leading-[28px] flex items-start gap-3">
+                    <div className=" shrink-0 mt-2">
+                      <BulletsIcon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <span className="font-bold">Web Integration:</span> We
+                      embed AI widgets into your site to turn clicks into
+                      conversations.
+                    </div>
                   </li>
-                  <li className="text-[#050000] text-[18px] leading-[28px] ">
-                    <span className="font-bold">CRM Sync:</span> We map the AIfs
-                    data directly to your database fields.
+                  <li className="text-[#050000] text-[18px] leading-[28px] flex items-start gap-3">
+                    <div className=" shrink-0 mt-2">
+                      <BulletsIcon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <span className="font-bold">CRM Sync:</span> We map the
+                      AIfs data directly to your database fields.
+                    </div>
                   </li>
-                  <li className="text-[#050000] text-[18px] leading-[28px] ">
-                    <span className="font-bold">Dashboard Access:</span> You get
-                    a crystal-clear dashboard to listen to call recordings and
-                    track ROI in real-time.
+                  <li className="text-[#050000] text-[18px] leading-[28px] flex items-start gap-3">
+                    <div className=" shrink-0 mt-2">
+                      <BulletsIcon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <span className="font-bold">Dashboard Access:</span> You
+                      get a crystal-clear dashboard to listen to call recordings
+                      and track ROI in real-time.
+                    </div>
                   </li>
                 </ul>
               </div>

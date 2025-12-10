@@ -9,6 +9,7 @@ import RoundedPolygon from "./RoundedPolygon";
 import problemBg from "@/public/images/real-estate/problembg.png";
 import problemIcon from "@/public/images/real-estate/problem.png";
 import bgImage from "@/public/images/home/futuristic-approach/bg.png";
+import { BulletsIcon } from "@/components/ui/Icons";
 
 // Points configuration
 const RECT_POINTS = [
@@ -202,16 +203,26 @@ const Problem = () => {
                   client. Your phone buzzes. It&apos;s a new lead calling from a
                   listing site.
                 </Text>
-                <ul className="list-disc pl-5">
-                  <li className="text-[#050000] text-[20px] leading-[32px] ">
-                    <span className="font-bold">Choice A:</span> Answer it, and
-                    be rude to the client standing in front of you.
+                <ul className=" pl-5">
+                  <li className="text-[#050000] text-[20px] leading-[32px] flex items-start gap-3">
+                    <div className="shrink-0 mt-2">
+                      <BulletsIcon />
+                    </div>
+                    <div>
+                      <span className="font-bold">Choice A:</span> Answer it,
+                      and be rude to the client standing in front of you.
+                    </div>
                   </li>
                   <br />
-                  <li className="text-[#050000] text-[20px] leading-[32px] ">
-                    <span className="font-bold">Choice B:</span> Send it to
-                    voicemail, and watch that lead call the next agent on the
-                    list.
+                  <li className="text-[#050000] text-[20px] leading-[32px] flex items-start gap-3">
+                    <div className="shrink-0 mt-2">
+                      <BulletsIcon />
+                    </div>
+                    <div>
+                      <span className="font-bold">Choice B:</span> Send it to
+                      voicemail, and watch that lead call the next agent on the
+                      list.
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -262,19 +273,29 @@ const Problem = () => {
                   client. Your phone buzzes. It&apos;s a new lead calling from a
                   listing site.
                 </Text>
-                <ul className="list-disc pl-5">
-                  <li className="text-[#050000] text-[20px] leading-[32px] ">
-                    <span className="font-bold">Choice A:</span> Answer it, and
-                    be rude to the client standing in front of you. Choice A:
-                    Answer it, and be rude to the client standing in front of
-                    you.
+                <ul className="">
+                  <li className="text-[#050000] text-[20px] leading-[32px] flex items-start gap-3">
+                    <div className="shrink-0 mt-2">
+                      <BulletsIcon />
+                    </div>
+                    <div>
+                      <span className="font-bold">Choice A:</span> Answer it,
+                      and be rude to the client standing in front of you. Choice
+                      A: Answer it, and be rude to the client standing in front
+                      of you.
+                    </div>
                   </li>
                   <br />
-                  <li className="text-[#050000] text-[20px] leading-[32px] ">
-                    <span className="font-bold">Choice B:</span> Send it to
-                    voicemail, and watch that lead call the next agent on the
-                    list. Choice B: Send it to voicemail, and watch that lead
-                    call the next agent on the list.
+                  <li className="text-[#050000] text-[20px] leading-[32px] flex items-start gap-3">
+                    <div className="shrink-0 mt-2">
+                      <BulletsIcon />
+                    </div>
+                    <div>
+                      <span className="font-bold">Choice B:</span> Send it to
+                      voicemail, and watch that lead call the next agent on the
+                      list. Choice B: Send it to voicemail, and watch that lead
+                      call the next agent on the list.
+                    </div>
                   </li>
                 </ul>
               </div>

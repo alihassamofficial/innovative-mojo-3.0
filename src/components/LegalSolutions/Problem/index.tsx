@@ -8,6 +8,7 @@ import RoundedPolygon from "./RoundedPolygon";
 
 import problemBg from "@/public/images/real-estate/problembg.png";
 import problemIcon from "@/public/images/legal-solution/problem.png";
+import { BulletsIcon } from "@/components/ui/Icons";
 
 // Points configuration
 const RECT_POINTS = [
@@ -200,28 +201,41 @@ const LegalSolutionsProblem = () => {
                   Most growing law firms struggle with the same bottleneck:
                   <span className="font-bold"> Intake.</span>
                 </Text>
-                <ul className="list-disc pl-5">
-                  <li className="text-[#050000] text-[20px] leading-[32px] ">
-                    <span className="font-bold">
-                      The &quot;Tire Kickers&quot;:
-                    </span>{" "}
-                    You spend 20 minutes on a The &quot;Tire Kickers&quot;: You
-                    spend 20 minutes on a &quot;free consultation&quot; call
-                    only to realize the person has no case or cannot afford your
-                    retainer.
+                <ul className=" pl-5">
+                  <li className="text-[#050000] text-[20px] leading-[32px] flex items-start gap-3">
+                    <div className="shrink-0 mt-2">
+                      <BulletsIcon />
+                    </div>
+                    <div>
+                      <span className="font-bold">The Tire Kickers:</span> You
+                      spend 20 minutes on a &quot;free consultation&quot; call
+                      only to realize the person has no case or cannot afford
+                      your retainer.
+                    </div>
                   </li>
 
-                  <li className="text-[#050000] text-[20px] leading-[32px] ">
-                    <span className="font-bold">
-                      The After-Hours Emergency:
-                    </span>{" "}
-                    A high-value Personal Injury lead calls at 2:00 AM. You are
-                    asleep. They call the next firm on Google who does answer.
+                  <li className="text-[#050000] text-[20px] leading-[32px] flex items-start gap-3">
+                    <div className="shrink-0 mt-2">
+                      <BulletsIcon />
+                    </div>
+                    <div>
+                      <span className="font-bold">
+                        The After-Hours Emergency:
+                      </span>{" "}
+                      A high-value Personal Injury lead calls at 2:00 AM. You
+                      are asleep. They call the next firm on Google who does
+                      answer.
+                    </div>
                   </li>
-                  <li className="text-[#050000] text-[20px] leading-[32px] ">
-                    <span className="font-bold">The Front Desk Gap:</span> Your
-                    receptionist is overwhelmed. Calls go to hold. Clients hang
-                    up.
+                  <li className="text-[#050000] text-[20px] leading-[32px] flex items-start gap-3">
+                    <div className="shrink-0 mt-2">
+                      <BulletsIcon />
+                    </div>
+                    <div>
+                      <span className="font-bold">The Front Desk Gap:</span>{" "}
+                      Your receptionist is overwhelmed. Calls go to hold.
+                      Clients hang up.
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -271,29 +285,44 @@ const LegalSolutionsProblem = () => {
                   Most growing law firms struggle with the same bottleneck:
                   <span className="font-bold"> Intake.</span>
                 </Text>
-                <ul className="list-disc pl-5">
-                  <li className="text-[#050000] text-[18px] leading-[28px] ">
-                    <span className="font-bold">
-                      The &quot;Tire Kickers&quot;:
-                    </span>{" "}
-                    You spend 20 minutes on a The &quot;Tire Kickers&quot;: You
-                    spend 20 minutes on a &quot;free consultation&quot; call
-                    only to realize the person has no case or cannot afford your
-                    retainer.
+                <ul className=" ">
+                  <li className="text-[#050000] text-[18px] leading-[28px] flex items-start gap-3">
+                    <div className="shrink-0 mt-2">
+                      <BulletsIcon />
+                    </div>
+                    <div>
+                      <span className="font-bold">
+                        The &quot;Tire Kickers&quot;:
+                      </span>{" "}
+                      You spend 20 minutes on a The &quot;Tire Kickers&quot;:
+                      You spend 20 minutes on a &quot;free consultation&quot;
+                      call only to realize the person has no case or cannot
+                      afford your retainer.
+                    </div>
                   </li>
-                  <li className="text-[#050000] text-[18px] leading-[28px] ">
-                    <span className="font-bold">
-                      The After-Hours Emergency:
-                    </span>{" "}
-                    A high-value Personal Injury lead The After-Hours Emergency:
-                    A high-value Personal Injury lead calls at 2:00 AM. You are
-                    asleep. They call the next firm on Google who does answer.
+                  <li className="text-[#050000] text-[18px] leading-[28px] flex items-start gap-3">
+                    <div className="shrink-0 mt-2">
+                      <BulletsIcon />
+                    </div>
+                    <div>
+                      <span className="font-bold">
+                        The After-Hours Emergency:
+                      </span>{" "}
+                      A high-value Personal Injury lead calls at 2:00 AM. You
+                      are asleep. They call the next firm on Google who does
+                      answer.
+                    </div>
                   </li>
-                  <li className="text-[#050000] text-[18px] leading-[28px] ">
-                    <span className="font-bold">The Front Desk Gap:</span> Your
-                    receptionist is overwhelmed. Calls The Front Desk Gap: Your
-                    receptionist is overwhelmed. Calls go to hold. Clients hang
-                    up.
+                  <li className="text-[#050000] text-[18px] leading-[28px] flex items-start gap-3">
+                    <div className="shrink-0 mt-2">
+                      <BulletsIcon />
+                    </div>
+                    <div>
+                      <span className="font-bold">The Front Desk Gap:</span>{" "}
+                      Your receptionist is overwhelmed. Calls The Front Desk
+                      Gap: Your receptionist is overwhelmed. Calls go to hold.
+                      Clients hang up.
+                    </div>
                   </li>
                 </ul>
               </div>
