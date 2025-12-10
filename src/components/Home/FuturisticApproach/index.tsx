@@ -28,9 +28,8 @@ const FuturisticApproach = () => {
             className="md:text-[48px] md:leading-[120%] font-light font-mona-sans"
           >
             The Practical{" "}
-            <span className="font-semibold">Futurist Approach Seamless</span>{" "}
-            <br />
-            Integration Zero Disruption
+            <span className="font-semibold">Futurist Approach </span> <br />
+            Seamless Integration Zero Disruption
           </Text>
         </div>
       </div>

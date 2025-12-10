@@ -126,15 +126,18 @@ const Footer = () => {
 
               {/* Social Media Icons */}
               <div className="flex justify-center md:justify-start gap-x-[20px] mt-[20px]">
-                <Link href="">
+                {/* <Link href="">
                   <FacebookSolidIcon />
                 </Link>
                 <Link href="">
                   <InstagramSolidIcon />
-                </Link>
-                <Link href="">
+                </Link> */}
+                <a
+                  href="https://www.linkedin.com/company/innovative-mojo/"
+                  target="_blank"
+                >
                   <LinkedInSolidIcon />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

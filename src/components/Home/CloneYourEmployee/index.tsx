@@ -125,9 +125,12 @@ const CloneYourEmployee = () => {
                 </Text>
                 <Text className="md:text-[20px] md:leading-[30px] font-mona-sans  mb-2 w-full md:max-w-[490px] capitalize">
                   Resources are best spent on qualified prospects. Our system
-                  acts as a gatekeeper, asking the hard questions (&quot;What is
-                  your budget&quot;, &quot;Do you have a case&quot;) before the
-                  lead ever reaches your calendar.
+                  acts as a gatekeeper, asking the hard questions
+                  <br />
+                  1. &quot;What is your budget&quot;
+                  <br />
+                  2. &quot;Do you have a case&quot; <br />
+                  before the lead ever reaches your calendar.
                 </Text>
               </div>
             </div>

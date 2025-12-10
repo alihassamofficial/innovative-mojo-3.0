@@ -203,14 +203,15 @@ const Problem = () => {
                   listing site.
                 </Text>
                 <ul className="list-disc pl-5">
-                  <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
-                    Choice A: Answer it, and be rude to the client standing in
-                    front of you.
+                  <li className="text-[#050000] text-[20px] leading-[32px] ">
+                    <span className="font-bold">Choice A:</span> Answer it, and
+                    be rude to the client standing in front of you.
                   </li>
                   <br />
-                  <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
-                    Choice B: Send it to voicemail, and watch that lead call the
-                    next agent on the list.
+                  <li className="text-[#050000] text-[20px] leading-[32px] ">
+                    <span className="font-bold">Choice B:</span> Send it to
+                    voicemail, and watch that lead call the next agent on the
+                    list.
                   </li>
                 </ul>
               </div>
@@ -262,14 +263,18 @@ const Problem = () => {
                   listing site.
                 </Text>
                 <ul className="list-disc pl-5">
-                  <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
-                    Choice A: Answer it, and be rude to the client standing in
-                    front of you.
+                  <li className="text-[#050000] text-[20px] leading-[32px] ">
+                    <span className="font-bold">Choice A:</span> Answer it, and
+                    be rude to the client standing in front of you. Choice A:
+                    Answer it, and be rude to the client standing in front of
+                    you.
                   </li>
                   <br />
-                  <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
-                    Choice B: Send it to voicemail, and watch that lead call the
-                    next agent on the list.
+                  <li className="text-[#050000] text-[20px] leading-[32px] ">
+                    <span className="font-bold">Choice B:</span> Send it to
+                    voicemail, and watch that lead call the next agent on the
+                    list. Choice B: Send it to voicemail, and watch that lead
+                    call the next agent on the list.
                   </li>
                 </ul>
               </div>
@@ -299,7 +304,6 @@ const Problem = () => {
                   as="h2"
                   className="md:text-[32px] md:leading-[120%] font-light font-mona-sans"
                 >
-                  The Reality:{" "}
                   <span className="font-semibold"> 78% of leads </span> do
                   business with the first agent who speaks to them. If you rely
                   on voicemail, you have already lost the commission

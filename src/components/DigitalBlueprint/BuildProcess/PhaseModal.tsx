@@ -98,7 +98,7 @@ const PhaseModal: React.FC<PhaseModalProps> = ({
               src={imageSrc}
               alt={title}
               fill
-              className="object-cover pointer-events-none"
+              className="pointer-events-none"
               sizes="(max-width: 700px) 100vw, 700px"
               priority
               onError={(e) => {
@@ -143,10 +143,30 @@ const PhaseModal: React.FC<PhaseModalProps> = ({
           {bulletPoints && bulletPoints.length > 0 && (
             <ul className="pl-4 lg:pl-[19px]">
               {bulletPoints.map((point, index) => {
+                // Split the point at the colon to separate heading from content
+                const colonIndex = point.indexOf(":");
+                const hasHeading = colonIndex !== -1;
+
+                const heading = hasHeading
+                  ? point.substring(0, colonIndex + 1)
+                  : "";
+                const content = hasHeading
+                  ? point.substring(colonIndex + 1).trim()
+                  : point;
+
                 return (
                   <li key={index} className="list-disc ">
-                    <Text className="text-[14px] leading-[22px] md:text-[17px] md:leading-[26px] font-bold">
-                      {point}
+                    <Text className="text-[14px] leading-[22px] md:text-[17px] md:leading-[26px]">
+                      {hasHeading ? (
+                        <>
+                          <span className="font-bold">{heading}</span>
+                          {content && (
+                            <span className="font-normal"> {content}</span>
+                          )}
+                        </>
+                      ) : (
+                        point
+                      )}
                     </Text>
                   </li>
                 );

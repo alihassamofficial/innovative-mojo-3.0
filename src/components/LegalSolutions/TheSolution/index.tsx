@@ -84,6 +84,15 @@ const TheSolution = () => {
                   />
                 </div>
 
+                {/* Mobile Gradient Overlay */}
+                <div
+                  className="absolute inset-0 md:hidden z-[5] opacity-70"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, rgba(228, 193, 103, 0) -26.79%, #E4C167 100%)",
+                  }}
+                />
+
                 {/* Content Container - Fixed at bottom */}
                 <div className="absolute inset-0 flex flex-col justify-end p-6 z-10">
                   {/* Title - Moves up on hover (desktop only) */}

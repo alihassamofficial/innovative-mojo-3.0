@@ -23,14 +23,18 @@ const Revnue = () => {
           data-aos-duration="1000"
           className="list-disc pl-5 text-black flex flex-col gap-2  max-w-[520px]  font-mona-sans md:text-[18px] text-[16px] md:leading-[24px] leading-[22px] m-0 "
         >
-          <li className="">Zero Missed Calls: Capture every lead, 24/7/365.</li>
           <li className="">
-            Higher Quality Consults: You only speak to clients who have been
-            vetted and are ready to hire you.
+            <span className="font-bold">Zero Missed Calls:</span> Capture every
+            lead, 24/7/365.
           </li>
           <li className="">
-            Instant Follow-Up: The AI sends a text with your retainer agreement
-            or meeting location immediately after the call ends.
+            <span className="font-bold">Higher Quality Consults:</span> You only
+            speak to clients who have been vetted and are ready to hire you.
+          </li>
+          <li className="">
+            <span className="font-bold">Instant Follow-Up:</span> The AI sends a
+            text with your retainer agreement or meeting location immediately
+            after the call ends.
           </li>
         </ul>
       </div>

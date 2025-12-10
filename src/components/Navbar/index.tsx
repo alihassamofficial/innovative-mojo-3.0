@@ -40,15 +40,15 @@ export default function Navbar() {
             </Text>
 
             {/* Book A Demo Button */}
-            <Link
-              href="/contact-us"
+            <a
+              href="https://innovativemojo.com/booking"
               className="shrink-0 flex items-center gap-[6px]"
             >
               <Text className="text-[10px] md:text-[13px] md:leading-[100%]  font-medium font-mona-sans">
                 Book A Demo
               </Text>
               <ArrowUpRightIcon className="w-3 h-3 text-white" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -98,9 +98,9 @@ export default function Navbar() {
 
             {/* CTA Button */}
             <Link href="/contact-us" className="shrink-0">
-              <Button className="bg-[#E5BF5B] border flex gap-x-[7px] items-center justify-center border-[#FAC11D] text-black  md:text-[15px]  leading-[28px] l rounded-[10px] font-medium w-[190px] h-[45px] font-mona-sans shadow-[0px_5px_10px_0px_#00000026]">
+              <Button className="bg-[#E5BF5B] border flex gap-x-[7px] items-center justify-center border-[#FAC11D] text-black  md:text-[15px]  leading-[28px] l rounded-[10px] font-medium w-[170px] h-[45px] font-mona-sans shadow-[0px_5px_10px_0px_#00000026]">
                 <PhoneSolidIcon />
-                Call The AI Now
+                Contact Us
               </Button>
             </Link>
           </div>
@@ -158,7 +158,7 @@ export default function Navbar() {
                 <Link href="/contact-us" className="block mt-[27px]">
                   <Button className=" w-[190px] mx-auto rounded-[10px] h-[50px] flex items-center justify-center gap-[7px] text-black text-[15px] leading-[28px] font-medium font-mona-sans shadow-[0px_5px_10px_0px_#00000026] transition-opacity duration-200 hover:opacity-90">
                     <PhoneSolidIcon />
-                    Call The AI Now
+                    Contact Us
                   </Button>
                 </Link>
               </div>

@@ -7,6 +7,7 @@ import Text from "@/components/ui/Text";
 import { GoogleRatingIcon, PhoneIcon } from "@/components/ui/Icons";
 import heroBg from "@/public/images/home/hero/bg.png";
 import ratingStarsIcon from "@/public/images/home/hero/rating-stars.svg";
+import SpectrumBars from "./SpectrumBars";
 
 const Hero = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -18,14 +19,14 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full bg-white overflow-hidden md:min-h-[808px]">
+    <section className="relative w-full bg-white overflow-hidden min-h-[700px] md:min-h-[800px]">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <Image src={heroBg} alt="Hero Background" fill priority />
       </div>
 
       {/* Content */}
-      <div className="relative max-w-[1240px] mx-auto px-5 py-20 md:pt-[65px] md:pb-[235  px]">
+      <div className="relative z-40 max-w-[1240px] mx-auto px-5 py-20 md:pt-[65px] md:pb-[235px]">
         <div className="flex flex-col items-center text-center ">
           {/* Rating Badge */}
           <div
@@ -137,6 +138,11 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Spectrum Bars */}
+      <div className="w-full absolute bottom-0 left-0 right-0  ">
+        <SpectrumBars />
       </div>
     </section>
   );

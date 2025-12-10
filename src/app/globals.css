@@ -189,3 +189,53 @@ html {
 .animate-accordion-up {
   animation: accordion-up 0.2s ease-out;
 }
+
+/* Spectrum Bars Animation */
+@keyframes pulseWithPause {
+  0% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(1.5);
+  }
+  60% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.spectrum-bar:nth-child(5) {
+  animation: pulseWithPause 4s ease-in-out 2;
+  animation-delay: 0s;
+  transform-origin: bottom;
+}
+
+.spectrum-bar:nth-child(4),
+.spectrum-bar:nth-child(6) {
+  animation: pulseWithPause 4s ease-in-out 2;
+  animation-delay: 0.08s;
+  transform-origin: bottom;
+}
+
+.spectrum-bar:nth-child(3),
+.spectrum-bar:nth-child(7) {
+  animation: pulseWithPause 4s ease-in-out 2;
+  animation-delay: 0.16s;
+  transform-origin: bottom;
+}
+
+.spectrum-bar:nth-child(2),
+.spectrum-bar:nth-child(8) {
+  animation: pulseWithPause 4s ease-in-out 2;
+  animation-delay: 0.24s;
+  transform-origin: bottom;
+}
+
+.spectrum-bar:nth-child(1),
+.spectrum-bar:nth-child(9) {
+  animation: pulseWithPause 4s ease-in-out 2;
+  animation-delay: 0.32s;
+  transform-origin: bottom;
+}

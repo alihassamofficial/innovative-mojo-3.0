@@ -227,18 +227,19 @@ const HomeProblem = () => {
                   already have.
                 </Text>
                 <ul className="list-disc pl-5">
-                  <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
-                    Web Integration: We embed AI widgets into your site to turn
-                    clicks into conversations.
+                  <li className="text-[#050000] text-[20px] leading-[32px] ">
+                    <span className="font-bold">Web Integration:</span> We embed
+                    AI widgets into your site to turn clicks into conversations.
                   </li>
 
-                  <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
-                    CRM Sync: We map the AIfs data directly to your database
-                    fields.
+                  <li className="text-[#050000] text-[20px] leading-[32px] ">
+                    <span className="font-bold">CRM Sync:</span> We map the AIfs
+                    data directly to your database fields.
                   </li>
-                  <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
-                    Dashboard Access: You get a crystal-clear dashboard to
-                    listen to call recordings and track ROI in real-time.
+                  <li className="text-[#050000] text-[20px] leading-[32px] ">
+                    <span className="font-bold">Dashboard Access:</span> You get
+                    a crystal-clear dashboard to listen to call recordings and
+                    track ROI in real-time.
                   </li>
                 </ul>
               </div>
@@ -290,17 +291,18 @@ const HomeProblem = () => {
                   already have.
                 </Text>
                 <ul className="list-disc pl-5">
-                  <li className="text-[#050000] text-[18px] leading-[28px] font-bold">
-                    Web Integration: We embed AI widgets into your site to turn
-                    clicks into conversations.
+                  <li className="text-[#050000] text-[18px] leading-[28px] ">
+                    <span className="font-bold">Web Integration:</span> We embed
+                    AI widgets into your site to turn clicks into conversations.
                   </li>
-                  <li className="text-[#050000] text-[18px] leading-[28px] font-bold">
-                    CRM Sync: We map the AIfs data directly to your database
-                    fields.
+                  <li className="text-[#050000] text-[18px] leading-[28px] ">
+                    <span className="font-bold">CRM Sync:</span> We map the AIfs
+                    data directly to your database fields.
                   </li>
-                  <li className="text-[#050000] text-[18px] leading-[28px] font-bold">
-                    Dashboard Access: You get a crystal-clear dashboard to
-                    listen to call recordings and track ROI in real-time.
+                  <li className="text-[#050000] text-[18px] leading-[28px] ">
+                    <span className="font-bold">Dashboard Access:</span> You get
+                    a crystal-clear dashboard to listen to call recordings and
+                    track ROI in real-time.
                   </li>
                 </ul>
               </div>

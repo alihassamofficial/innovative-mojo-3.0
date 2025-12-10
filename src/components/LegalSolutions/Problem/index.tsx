@@ -201,20 +201,27 @@ const LegalSolutionsProblem = () => {
                   <span className="font-bold"> Intake.</span>
                 </Text>
                 <ul className="list-disc pl-5">
-                  <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
-                    The &quot;Tire Kickers&quot;: You spend 20 minutes on a
-                    &quot;free consultation&quot; call only to realize the
-                    person has no case or cannot afford your retainer.
+                  <li className="text-[#050000] text-[20px] leading-[32px] ">
+                    <span className="font-bold">
+                      The &quot;Tire Kickers&quot;:
+                    </span>{" "}
+                    You spend 20 minutes on a The &quot;Tire Kickers&quot;: You
+                    spend 20 minutes on a &quot;free consultation&quot; call
+                    only to realize the person has no case or cannot afford your
+                    retainer.
                   </li>
 
-                  <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
-                    The After-Hours Emergency: A high-value Personal Injury lead
-                    calls at 2:00 AM. You are asleep. They call the next firm on
-                    Google who does answer.
+                  <li className="text-[#050000] text-[20px] leading-[32px] ">
+                    <span className="font-bold">
+                      The After-Hours Emergency:
+                    </span>{" "}
+                    A high-value Personal Injury lead calls at 2:00 AM. You are
+                    asleep. They call the next firm on Google who does answer.
                   </li>
-                  <li className="text-[#050000] text-[20px] leading-[32px] font-bold">
-                    The Front Desk Gap: Your receptionist is overwhelmed. Calls
-                    go to hold. Clients hang up.
+                  <li className="text-[#050000] text-[20px] leading-[32px] ">
+                    <span className="font-bold">The Front Desk Gap:</span> Your
+                    receptionist is overwhelmed. Calls go to hold. Clients hang
+                    up.
                   </li>
                 </ul>
               </div>
@@ -265,19 +272,28 @@ const LegalSolutionsProblem = () => {
                   <span className="font-bold"> Intake.</span>
                 </Text>
                 <ul className="list-disc pl-5">
-                  <li className="text-[#050000] text-[18px] leading-[28px] font-bold">
-                    The &quot;Tire Kickers&quot;: You spend 20 minutes on a
-                    &quot;free consultation&quot; call only to realize the
-                    person has no case or cannot afford your retainer.
+                  <li className="text-[#050000] text-[18px] leading-[28px] ">
+                    <span className="font-bold">
+                      The &quot;Tire Kickers&quot;:
+                    </span>{" "}
+                    You spend 20 minutes on a The &quot;Tire Kickers&quot;: You
+                    spend 20 minutes on a &quot;free consultation&quot; call
+                    only to realize the person has no case or cannot afford your
+                    retainer.
                   </li>
-                  <li className="text-[#050000] text-[18px] leading-[28px] font-bold">
-                    The After-Hours Emergency: A high-value Personal Injury lead
-                    calls at 2:00 AM. You are asleep. They call the next firm on
-                    Google who does answer.
+                  <li className="text-[#050000] text-[18px] leading-[28px] ">
+                    <span className="font-bold">
+                      The After-Hours Emergency:
+                    </span>{" "}
+                    A high-value Personal Injury lead The After-Hours Emergency:
+                    A high-value Personal Injury lead calls at 2:00 AM. You are
+                    asleep. They call the next firm on Google who does answer.
                   </li>
-                  <li className="text-[#050000] text-[18px] leading-[28px] font-bold">
-                    The Front Desk Gap: Your receptionist is overwhelmed. Calls
-                    go to hold. Clients hang up.
+                  <li className="text-[#050000] text-[18px] leading-[28px] ">
+                    <span className="font-bold">The Front Desk Gap:</span> Your
+                    receptionist is overwhelmed. Calls The Front Desk Gap: Your
+                    receptionist is overwhelmed. Calls go to hold. Clients hang
+                    up.
                   </li>
                 </ul>
               </div>
