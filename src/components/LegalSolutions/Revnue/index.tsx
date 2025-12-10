@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import bg from "@/public/images/legal-solution/revnue.png";
 import Text from "@/components/ui/Text";
+import { BulletsBlackIcon, BulletsIcon } from "@/components/ui/Icons";
 
 const Revnue = () => {
   return (
@@ -21,20 +22,34 @@ const Revnue = () => {
           data-aos="fade-up"
           data-aos-delay="300"
           data-aos-duration="1000"
-          className="list-disc pl-5 text-black flex flex-col gap-2  max-w-[520px]  font-mona-sans md:text-[18px] text-[16px] md:leading-[24px] leading-[22px] m-0 "
+          className=" pl-5 text-black flex flex-col gap-2  max-w-[520px]  font-mona-sans md:text-[18px] text-[16px] md:leading-[24px] leading-[22px] m-0 "
         >
-          <li className="">
+          <li className="flex items-start gap-3">
+            <div className="shrink-0 mt-1">
+              <BulletsIcon />
+            </div>
             <span className="font-bold">Zero Missed Calls:</span> Capture every
             lead, 24/7/365.
           </li>
-          <li className="">
-            <span className="font-bold">Higher Quality Consults:</span> You only
-            speak to clients who have been vetted and are ready to hire you.
+          <li className="flex items-start gap-3">
+            <div className="shrink-0 mt-1">
+              <BulletsIcon />
+            </div>
+            <div>
+              <span className="font-bold">Higher Quality Consults:</span> You
+              only speak to clients who have been vetted and are ready to hire
+              you.
+            </div>
           </li>
-          <li className="">
-            <span className="font-bold">Instant Follow-Up:</span> The AI sends a
-            text with your retainer agreement or meeting location immediately
-            after the call ends.
+          <li className="flex items-start gap-3">
+            <div className="shrink-0 mt-1">
+              <BulletsIcon />
+            </div>
+            <div>
+              <span className="font-bold">Instant Follow-Up:</span> The AI sends
+              a text with your retainer agreement or meeting location
+              immediately after the call ends.
+            </div>
           </li>
         </ul>
       </div>
