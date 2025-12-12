@@ -102,7 +102,7 @@ const AgentForm = () => {
       />
 
       {/* Vertical Separator */}
-      <div className="hidden md:block w-px h-8 md:h-12 bg-gray-400" />
+      <div className="hidden md:block p-[0.5px] h-8 md:h-12 bg-gray-400" />
 
       {/* Email Input */}
       <input
@@ -116,7 +116,7 @@ const AgentForm = () => {
         />
 
       {/* Vertical Separator */}
-      <div className="hidden md:block w-px h-8 md:h-12 bg-gray-400" />
+      <div className="hidden md:block p-[0.5px] h-8 md:h-12 bg-gray-400" />
 
       {/* Phone Input */}
       <div className="w-full md:flex-1 md:max-w-[239px]">
