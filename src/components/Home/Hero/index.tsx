@@ -8,6 +8,7 @@ import { GoogleRatingIcon, PhoneIcon } from "@/components/ui/Icons";
 import heroBg from "@/public/images/home/hero/bg.png";
 import ratingStarsIcon from "@/public/images/home/hero/rating-stars.svg";
 import SpectrumBars from "./SpectrumBars";
+import AgentForm from "./AgentForm";
 
 const Hero = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -72,8 +73,8 @@ const Hero = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="flex flex-col items-center space-y-4 w-full max-w-md mt-[60px]">
-            <div
+          <div className="flex flex-col items-center space-y-4 w-full  mt-[40px]">
+            {/* <div
               data-aos="fade-up"
               data-aos-delay="400"
               data-aos-duration="1000"
@@ -84,7 +85,7 @@ const Hero = () => {
               >
                 Talk To Voice Agent
               </Text>
-            </div>
+            </div> */}
 
             {/* Phone Input */}
             <div
@@ -93,8 +94,7 @@ const Hero = () => {
               data-aos-duration="1000"
               className="relative w-full mb-[9px]"
             >
-              <div className="flex items-center bg-white border border-[#E5BF5B] h-[50px] md:h-[75px] w-full md:max-w-[464px] mx-auto rounded-full overflow-hidden">
-                {/* Country Code Dropdown */}
+              {/* <div className="flex items-center bg-white border border-[#E5BF5B] h-[50px] md:h-[75px] w-full md:max-w-[464px] mx-auto rounded-full overflow-hidden">
                 <select
                   value={countryCode}
                   onChange={(e) => setCountryCode(e.target.value)}
@@ -106,7 +106,6 @@ const Hero = () => {
                   <option value="+86">+86</option>
                 </select>
 
-                {/* Phone Number Input */}
                 <input
                   type="tel"
                   value={phoneNumber}
@@ -115,7 +114,6 @@ const Hero = () => {
                   className="flex-1 min-w-0 px-2 md:px-4 py-2 md:py-4 bg-transparent text-black placeholder:text-black/40 focus:outline-none text-sm md:text-base"
                 />
 
-                {/* Call Button */}
                 <button
                   onClick={handleCall}
                   className="w-10 h-10 md:w-14 md:h-14 bg-secondary cursor-pointer rounded-full flex items-center justify-center transition-colors duration-200 m-1 md:m-1 shrink-0"
@@ -123,7 +121,8 @@ const Hero = () => {
                 >
                   <PhoneIcon />
                 </button>
-              </div>
+              </div> */}
+              <AgentForm />
             </div>
 
             {/* Disclaimer */}
@@ -132,8 +131,8 @@ const Hero = () => {
               data-aos-delay="600"
               data-aos-duration="1000"
             >
-              <Text className="text-[18px] leading-[100%] font-normal font-mona-sans">
-                Available 24/7
+              <Text className="text-[16px] leading-[100%] font-normal font-mona-sans italic mt-6">
+              Fill out the form and our AI will call you back instantly.
               </Text>
             </div>
           </div>
