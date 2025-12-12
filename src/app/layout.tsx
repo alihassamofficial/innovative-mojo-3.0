@@ -6,6 +6,7 @@ import "./globals.css";
 import AOSProvider from "@/providers/AOSProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -75,6 +76,7 @@ export default function RootLayout({
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
+          <Toaster position="top-center" />
         </AOSProvider>
       </body>
     </html>
