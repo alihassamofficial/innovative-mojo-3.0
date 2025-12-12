@@ -61,7 +61,7 @@ const LeftSlide = () => {
     };
 
     return (
-        <div className='max-w-[505px] w-full relative h-full md:min-h-[650px] min-h-[500px] md:px-0 px-5 overflow-hidden flex flex-col items-center justify-center'>
+        <div className='max-w-[505px] w-full relative h-full md:min-h-[670px] min-h-[500px] md:px-0 px-5 overflow-hidden flex flex-col items-center justify-center'>
             <Image className='absolute inset-0 w-full max-w-[525px] h-full z-0 md:p-1 px-5' src={leftSlideBg} alt="leftSlideBg" />
 
             <div className='relative z-10 flex flex-col  '>
